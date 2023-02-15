@@ -51,6 +51,7 @@ body {
 .login {
     display: flex;
     margin: auto;
+    height: 150px;
     justify-content: center;
     align-items: center;
 }
@@ -186,7 +187,7 @@ body {
     border-radius: 10px;
 }
 
-.card-foto {}
+//.card-foto {}
 
 .ft-cad {
     display: initial;
@@ -272,3 +273,100 @@ body {
         height: auto;
     }
 }
+
+.info-pac {
+    position: relative;
+    margin-bottom: 45px;
+  }
+  
+  input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #999;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  
+  label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  
+  input:focus~label,
+  input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #999;
+  }
+  
+  
+  .bar {
+    position: relative;
+    display: block;
+    width: 300px;
+  }
+  
+  .bar:before,
+  .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #999;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  .bar:before {
+    left: 50%;
+  }
+  
+  .bar:after {
+    right: 50%;
+  }
+  
+  
+  .light {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 220px;
+    opacity: 0.5;
+  }
+  
+
+  /*--------------------
+ Custom Srollbar
+ --------------------*/
+.mCSB_scrollTools {
+    margin: 1px -3px 1px 0;
+    opacity: 0;
+  }
+  .mCSB_inside > .mCSB_container {
+    margin-right: 0px;
+    padding: 0 10px;
+  }
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    display: none !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+
+  
