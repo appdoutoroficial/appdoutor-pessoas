@@ -1,5 +1,6 @@
 <?php include("../inc/client.php");
 cabecalho(); ?>
+<div class="container">
 <div class="card-txt">
     <div class="card-body">
         <p class="txt-instru"><b>Fulano</b>, para ter certeza que sua contavai estar segura, nós precisamos que você adicione uma senha.</p>
@@ -11,4 +12,5 @@ cabecalho(); ?>
     <input class="form-control cad-2" type="password" name="" required="" placeholder="Repita sua senha">
 </div>
 <button class="btn-avancar">Avançar</button>
+</div>
 <?php footer(); ?>

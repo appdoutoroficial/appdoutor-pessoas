@@ -1,5 +1,6 @@
 <?php include("../inc/client.php");
 cabecalho(); ?>
+<div class="container">
 <div class="card-txt">
     <div class="card-body">
         <p class="txt-instru">Seja muito <b>bem vindo!</b></p>
@@ -12,4 +13,5 @@ cabecalho(); ?>
     <input type="text" class="cad-2" id="nome" placeholder="Digite seu nome completo">
 </div>
 <button class="btn-avancar">Avançar</button>
+</div>
 <?php footer(); ?>

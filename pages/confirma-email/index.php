@@ -1,5 +1,6 @@
 <?php include("../inc/client.php");
 cabecalho(); ?>
+<div class="container">
 <div class="card-txt">
     <div class="card-body">
         <p class="txt-instru"><b>Fulano</b>, digite o código recebido no seu email, para continuar.</p>
@@ -11,5 +12,6 @@ cabecalho(); ?>
 <button class="btn-avancar">Avançar</button>
 <div class="bx-cad">
     <a href="#" class="cad"> Reenviar código</a>
+</div>
 </div>
 <?php footer(); ?>
