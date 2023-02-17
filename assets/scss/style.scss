@@ -182,12 +182,14 @@ body {
 
 .selfie {
     display: block;
-    width: 300px;
+    width: 250px;
     margin: auto;
     border-radius: 10px;
 }
 
-//.card-foto {}
+.card-foto {
+    margin: 20px auto;
+}
 
 .ft-cad {
     display: initial;
@@ -240,11 +242,12 @@ body {
 .login {
     margin: 50px auto;
     background: #fff;
-    border: 1px solid #e1e1e1;
+    border: 1px solid #87DDDD;
     width: 330px;
     display: flex;
     padding: 5px 30px;
-    align-items: center
+    align-items: center;
+    border-radius: 10px;
 }
 
 .login h5 {
@@ -369,4 +372,22 @@ body {
     background-color: rgba(0, 0, 0, 0.5) !important;
   }
 
-  
+  .txt-log a {
+    color: #43DEDB;
+    text-decoration: none;
+  }
+
+  .txt-log a:hover {
+    color: #43DEDB !important;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .plus {
+    font-size: 50px;
+    color: #43DEDB;
+  }
+
+  .txt-end {
+    color: #43DEDB;
+  }

@@ -11,7 +11,7 @@ cabecalho(); ?>
 <h5 class="txt-log"><a href="#">usuario@dominio.com</a></h5>            
 </div>
 <div class="login">  
-<i class="fa-solid fa-circle-plus"></i>
+<i class="fa-solid fa-circle-plus plus"></i>
 <h5 class="txt-log"><a href="#">Usar outra conta</a></h5>            
 </div>
 <button class="btn-avancar">Vamos lá!</button>
