@@ -1,16 +1,16 @@
 <?php include("../inc/client.php");
 cabecalho(); ?>
 <div class="container">
-    <div class="card-txt2">
+    <div class="card-txt-1">
         <div class="card-body">
             <p class="txt-instru"><b>Fulano</b>, vamos revisar as informações enviadas.</p>
         </div>
     </div>
-    <div class="card-revisa">
+    <!--<div class="card-revisa">
         <div class="card-body">
             <img src="../../assets/images/selfie.png" class="ft-cad" alt="">
         </div>
-    </div>
+    </div>-->
 
     <div class="">
         <form>

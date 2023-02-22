@@ -1,7 +1,7 @@
 <?php include("../inc/client.php");
 cabecalho(); ?>
 <div class="container">
-    <div class="card-txt">
+    <div class="card-txt-1">
         <div class="card-body">
             <p class="txt-instru"><b>Fulano</b>, agora precisamos saber o seu endereço.</p>
         </div>

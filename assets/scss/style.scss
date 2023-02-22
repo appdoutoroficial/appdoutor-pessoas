@@ -242,7 +242,7 @@ body {
     margin: 50px auto;
     background: #fff;
     border: 1px solid #87DDDD;
-    width: 330px;
+    width: 95%;
     display: flex;
     padding: 5px 30px;
     align-items: center;
@@ -388,4 +388,8 @@ input:valid~label {
 
 .txt-end {
     color: #43DEDB;
+}
+
+.card-txt-1 {
+    margin: 350px 0 40px;
 }
