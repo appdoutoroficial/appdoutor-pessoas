@@ -12,7 +12,9 @@ const NavBar = () => {
             <FontAwesomeIcon icon={faChevronLeft} onClick={() => navigate(-1)} />
 
             <div className="logo1">
-                <img src={logo} className="logo" alt="" />
+                <a href="/login">
+                    <img src={logo} className="logo" alt="" />
+                </a>
             </div>
         </nav>
     )

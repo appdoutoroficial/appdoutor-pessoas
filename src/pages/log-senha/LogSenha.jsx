@@ -25,7 +25,7 @@ const LogSenha = () => {
                 senha: senha
             })
             .then((response) => {
-                console.log(response);
+                // console.log(response);
             })
             .catch((err) =>{
                 Swal.fire({

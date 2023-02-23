@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Swal from "sweetalert2";
 
 const ValidaCPF = () => {
-    localStorage.clear();
+    // localStorage.clear();
 
     const preencha = "Preencha seu CPF";
     const [disable, setDisable] = useState(true);
@@ -19,13 +19,14 @@ const ValidaCPF = () => {
     });
 
     const validaCPF = (elem) => {
+        localStorage.setItem('cpf', elem.target.value);
+
         if( elem.target.value != '' ){
             axiosConfig.post("/Pessoa/ValidaCPF?CPF="+elem.target.value)
             .then((response) => {
                 if( response.data.statusCode === 200 && response.data.existente === false ){
                     setButton("Avançar");
                     setDisable(false);
-                    localStorage.setItem('cpf', JSON.stringify(elem.target.value));
                 }else{
                     setButton(preencha);
                     Swal.fire({

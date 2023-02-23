@@ -44,7 +44,7 @@ const Endereco = () => {
             }else{
                 setCep(response.data);
                 localStorage.setItem('cep', JSON.stringify(response.data));
-                console.log(localStorage.getItem('cep'));
+                // console.log(localStorage.getItem('cep'));
 
             }
         })

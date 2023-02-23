@@ -79,7 +79,7 @@ const Revisa = () => {
 
         setFormData((prev) => [{...prev, 
             nome: limpaVariavel(localStorage.getItem('name')),
-            sobrenome: "",
+            sobrenome: limpaVariavel(localStorage.getItem('sobrenome')),
             email: limpaVariavel(localStorage.getItem('email')),
             telefone: "55"+limpaVariavel(localStorage.getItem('telefone')),
             cpf: limpaVariavel(localStorage.getItem('cpf')),
@@ -124,6 +124,8 @@ const Revisa = () => {
         })
     }
 
+    // console.log(revisa);
+
     return (
         <>
             <Navbar />
@@ -150,8 +152,14 @@ const Revisa = () => {
                 <div className="">
                     <form>
                         <div className="info-pac">
-                            <h6 className="cad">Nome completo</h6>
+                            <h6 className="cad">Nome</h6>
                             <input type="text" value={limpaVariavel(revisa.name)} placeholder="Fulano de Tal" />
+                            <span className="bar"></span>
+                        </div>
+
+                        <div className="info-pac">
+                            <h6 className="cad">Sobrenome</h6>
+                            <input type="text" value={limpaVariavel(revisa.sobrenome)} placeholder="Fulano de Tal" />
                             <span className="bar"></span>
                         </div>
 

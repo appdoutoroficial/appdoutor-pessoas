@@ -7,9 +7,11 @@ import Swal from "sweetalert2";
 const Nome = () => {
     const navigate = useNavigate();
     const [nome, setNome] = useState("");
+    const [sobren, setSobrenome] = useState("");
 
     useEffect(() => {
         checkLocalStorage();
+        // console.log(localStorage)
     })
 
     const checkLocalStorage = () => {
@@ -26,6 +28,13 @@ const Nome = () => {
         }
     }
 
+    const getSobrenome = (elem) => {
+        if( elem.target.value != '' ){
+            setSobrenome(elem.target.value);
+            localStorage.setItem('sobrenome', JSON.stringify(elem.target.value));            
+        }
+    }
+
     const ValidaNome = () => {
         if( nome != '' ){
             Swal.fire({
@@ -37,7 +46,7 @@ const Nome = () => {
                 cancelButtonText: 'Não',
                 focusConfirm: false,
             }).then((result) => {
-                console.log(result, 'aq');
+                // console.log(result, 'aq');
               if (result.isConfirmed) {
                 navigate('/nascimento');
               }
@@ -68,8 +77,13 @@ const Nome = () => {
                         <p className="txt-instru">Para iniciar a criação da sua conta, insira abaixo como podemos te chamar.</p>
                     </div>
                 </div>
+
                 <div className="campo-cad">
-                    <input type="text" className="cad-2" id="nome" onChange={setName} placeholder="Digite seu nome completo" />
+                    <input type="text" className="cad-2" id="nome" onChange={setName} placeholder="Nome" />
+                </div>
+
+                <div className="campo-cad">
+                    <input type="text" className="cad-2" id="sobrenome" onChange={getSobrenome} placeholder="Sobrenome" />
                 </div>
 
                 <button className="btn-avancar" onClick={ValidaNome}>Avançar</button>
