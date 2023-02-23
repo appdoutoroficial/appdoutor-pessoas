@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from '../../assets/images/123.png'; // Tell webpack this JS file uses this image
+import logo from '../../assets/images/123.png'; 
 
 const ContaCriada = () => {
     return (

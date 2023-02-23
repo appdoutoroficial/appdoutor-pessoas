@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Component } from "react";
 import Navbar from '../../components/NavBar';
-import bemvindo from '../../assets/images/123.png'; // Tell webpack this JS file uses this image
+import bemvindo from '../../assets/images/123.png'; 
 
 const bemVindo = () => {
     return (

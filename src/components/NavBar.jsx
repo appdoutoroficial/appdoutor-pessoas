@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
-import logo from '../assets/images/logo-branco.png'; // Tell webpack this JS file uses this image
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import logo from '../assets/images/logo-branco.png'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
+    const navigate = useNavigate();
+
     return (
         <nav className="navbar navbar-expand-lg">
-            <FontAwesomeIcon icon={faChevronLeft} />
+            <FontAwesomeIcon icon={faChevronLeft} onClick={() => navigate(-1)} />
 
             <div className="logo1">
                 <img src={logo} className="logo" alt="" />
