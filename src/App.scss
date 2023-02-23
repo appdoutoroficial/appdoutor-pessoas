@@ -388,3 +388,7 @@ input:valid~label {
 .txt-end {
     color: #43DEDB;
 }
+
+input[name*="cpf"] {
+    text-align: center;
+}

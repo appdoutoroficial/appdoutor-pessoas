@@ -2,6 +2,7 @@
     "name": "react-pessoas",
     "version": "0.1.0",
     "private": true,
+    "proxy": "https://ad-onboard-webapi-hom.azurewebsites.net/",
     "dependencies": {
         "@fortawesome/fontawesome": "^1.1.8",
         "@fortawesome/fontawesome-free-solid": "^5.0.13",
