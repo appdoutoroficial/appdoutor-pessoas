@@ -7,8 +7,6 @@ import Button from '@mui/material/Button';
 import Swal from "sweetalert2";
 
 const ValidaCPF = () => {
-    // localStorage.clear();
-
     const preencha = "Preencha seu CPF";
     const [disable, setDisable] = useState(true);
     const [cpf, setCpf] = useState();
