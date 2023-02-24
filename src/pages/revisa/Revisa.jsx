@@ -133,7 +133,7 @@ const Revisa = () => {
             <div className="container noScroll">
                 <div className="card-txt2">
                     <div className="card-body">
-                        <p className="txt-instru"><b>Fulano</b>, vamos revisar as informações enviadas.</p>
+                        <p className="txt-instru3"><b>Fulano</b>, vamos revisar as informações enviadas.</p>
                     </div>
                 </div>
 
