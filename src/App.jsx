@@ -14,13 +14,13 @@ import './App.scss'
 function App() {
   let element = useRoutes([
     {path: '/', exact: true, element: <Cadastro />},
-    {path: '/', exact: true, element: <Entrar />},
-    {path: '/', exact: true, element: <EntrarGmail />},
-    {path: '/', exact: true, element: <VerificaSms/>},
-    {path: '/', exact: true, element: <VerificaEmail/>},
-    {path: '/', exact: true, element: <CadastroPessoa/>},
-    {path: '/', exact: true, element: <Congrats/>}, 
-    {path: '/', exact: true, element: <Home/>},
+    {path: '/entrar', exact: true, element: <Entrar />},
+    {path: '/entrar-gmail', exact: true, element: <EntrarGmail />},
+    {path: '/sms', exact: true, element: <VerificaSms/>},
+    {path: '/email', exact: true, element: <VerificaEmail/>},
+    {path: '/cadastro', exact: true, element: <CadastroPessoa/>},
+    {path: '/congrats', exact: true, element: <Congrats/>}, 
+    {path: '/home', exact: true, element: <Home/>},
   
   ]);
 
