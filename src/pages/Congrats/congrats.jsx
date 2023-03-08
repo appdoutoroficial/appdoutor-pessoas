@@ -8,7 +8,7 @@ const Congrats = () => {
             <div className="mb-5">
               <img src="img/mobile.png" alt="" className="img-fluid blue-logo mb-5" />
               <h1 className="primario display-1 fw-bold mb-2">SEU APP</h1>
-              <h2><STROng>EXCLUSIVO</STROng></h2>
+              <h2><strong>EXCLUSIVO</strong></h2>
               <h6>Mais conforto para você e seus pacientes</h6>
             </div>
           </div>
