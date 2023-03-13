@@ -4,7 +4,11 @@ import Inicial from "./pages/inicial/Inicial";
 import Signin from "./pages/sign-in/Signin";
 import Entrar from "./pages/entrar/Entrar";
 import Verify from "./pages/verify/Verify";
+import VerifyEmail from "./pages/verify-email/VerifyEmail";
 import Profile from "./pages/profile/Profile";
+import Selfie from "./pages/selfie/Selfie";
+import Gmail from "./pages/entrarGmail/EntrarGmail";
+import Congrats from "./pages/congrats/Congrats";
 import IndexInterno from "./pages/interna/inicial/Inicial";
 
 import './assets/materialdesign/scss/materialdesignicons.scss'
@@ -17,10 +21,14 @@ import './App.scss'
 function App() {
   let element = useRoutes([
     {path: '/', exact: true, element: <Inicial />},
-    {path: '/cadastrar', exact: true, element: <Signin />},
+    {path: '/cadastrar', exact: true, element: <Signin />},  
     {path: '/entrar', exact: true, element: <Entrar />},
-    {path: '/verify', exact: true, element: <Verify />},
-    {path: '/profile', exact: true, element: <Profile />},
+    {path: '/verifica', exact: true, element: <Verify />},
+    {path: '/verifica-email', exact: true, element: <VerifyEmail />},  
+    {path: '/cadastro', exact: true, element: <Profile />},
+    {path: '/selfie', exact: true, element: <Selfie />},
+    {path: '/finalizar', exact: true, element: <Congrats />},
+    {path: '/login-gmail', exact: true, element: <Gmail />},
     {path: '/admin/index', exact: true, element: <IndexInterno />},
   ]);
 

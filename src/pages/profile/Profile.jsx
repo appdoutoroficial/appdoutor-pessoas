@@ -76,7 +76,7 @@ const Profile = () => {
                         </div>
                     </div>                             
                     <div>
-                    <a href="selfie.html" className="btn btn-info btn-lg w-100 rounded-4 mb-3">Continuar</a>              
+                    <a href="/selfie" className="btn btn-info btn-lg w-100 rounded-4 mb-3">Continuar</a>              
                     </div>
                 </form>
             </div>

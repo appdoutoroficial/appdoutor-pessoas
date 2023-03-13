@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Verify = () => {
+const VerifyEmail = () => {
     return (
         <>
             <div className="verify p-4">
@@ -8,7 +8,7 @@ const Verify = () => {
                     <div>
                         <span className="mdi mdi-account-check-outline display-1 user-icon"></span>
                         <h2 className="my-3 fw-bold secundario">Verificação</h2>
-                        <p className="text-muted mb-0">Digite o código enviado para seu número</p>
+                        <p className="text-muted mb-0">Digite o código enviado para seu e-mail</p>
                     </div>           
                 </div>
                 <div className="d-flex gap-1 mb-2">
@@ -31,10 +31,10 @@ const Verify = () => {
                 <p className="text-muted text-center mt-4">Não recebeu o código? <a href="#" className="ml-2 primario">Enviar novamente</a></p>
             </div>
             <div className="footer fixed-bottom m-4">
-                <a href="/verifica-email" className="btn btn-info btn-lg w-100 rounded-4">Confirma</a>
+                <a href="/cadastro" className="btn btn-info btn-lg w-100 rounded-4">Confirma</a>
             </div>
         </>
     )
 }
 
-export default Verify;
+export default VerifyEmail;

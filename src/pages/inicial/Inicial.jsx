@@ -15,8 +15,8 @@ const Inicial = () => {
             </div>
 
             <div className="footer fixed-bottom d-grid gap-3 m-4">
-                <a href="sign-up.html" className="btn btn-info btn-lg">Inscreva-se</a>
-                <a href="sign-in.html" className="btn btn-outline-info btn-lg">Entrar com App doutor</a>
+                <a href="/cadastrar" className="btn btn-info btn-lg">Inscreva-se</a>
+                <a href="/entrar" className="btn btn-outline-info btn-lg">Entrar com App doutor</a>
             </div>
         </>
     )

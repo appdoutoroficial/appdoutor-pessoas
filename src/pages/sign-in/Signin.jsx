@@ -41,8 +41,8 @@ const Signin = () => {
                     </div>
                     </div>          
                     <div>
-                    <a href="verify.html" className="btn btn-info btn-lg w-100 rounded-4 mb-3">Criar Conta</a>
-                    <p className="text-muted text-center small">Já tem cadastro? <a className="text-primary" href="sign-in.html">Entrar</a></p>
+                    <a href="/verifica" className="btn btn-info btn-lg w-100 rounded-4 mb-3">Criar Conta</a>
+                    <p className="text-muted text-center small">Já tem cadastro? <a className="text-primary" href="/entrar">Entrar</a></p>
                     </div>
                 </form>
             </div>

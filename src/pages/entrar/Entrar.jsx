@@ -7,8 +7,7 @@ const Signin = () => {
                 <div className="d-flex align-items-start justify-content-between mb-4">
                     <div>
                         <span className="mdi mdi-account-circle-outline display-1 user-icon"></span>
-                        <h2 className="my-3 fw-bold secundario">Bem vindo de volta!</h2>
-                        <p className="text-muted mb-0">Texto<br />a definir*</p>
+                        <h2 className="my-3 fw-bold secundario">Bem vindo de volta!</h2>                        
                     </div>
                 
                 </div>
@@ -35,7 +34,7 @@ const Signin = () => {
                         <label className="form-check-label" for="flexSwitchCheckDefault">Lembrar-me</label>
                     </div>
                     <div>
-                        <a href="home.html" className="btn btn-info btn-lg w-100 rounded-4 mb-2">Entrar</a>
+                        <a href="/admin/index" className="btn btn-info btn-lg w-100 rounded-4 mb-2">Entrar</a>
                         <div className="d-flex justify-content-between mt-2">
                         <a href="forget-password.html" className="d-flex justify-content-end small text-primary">Esqueceu sua senha?</a>
                         <p className="text-muted text-end small">Ainda não tem cadastro? <a className="text-primary" href="sign-up.html">Registre-se</a></p>
@@ -51,9 +50,9 @@ const Signin = () => {
                     <hr className="col" />
                 </div>
                 <div className="d-flex gap-3">
-                    <a href="sign-in-email.html" className="btn btn-white btn-lg bg-white col d-flex align-items-center justify-content-center shadow-sm border">
-                        <i className="bi bi-google h4 mb-0 me-3 secundario"></i>Google</a>
-                    <a href="sign-in-email.html" className="btn btn-white btn-lg bg-white col d-flex align-items-center justify-content-center shadow-sm border">
+                    <a href="/login-gmail" className="btn btn-white btn-lg bg-white col d-flex align-items-center justify-content-center shadow-sm border">
+                    <i className="bi bi-google"></i>Google</a>
+                    <a href="/entrarGmail" className="btn btn-white btn-lg bg-white col d-flex align-items-center justify-content-center shadow-sm border">
                         <i className="bi bi-facebook h4 mb-0 me-3 secundario"></i>Facebook</a>
                 </div>
             </div>
