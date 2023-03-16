@@ -13,11 +13,11 @@ const Selfie = () => {
                <p className="text-muted mb-0">Escolha o tire uma selfie para continuar</p>
             </div>
          </div>
-          <div className=" d-flex align-items-center justify-content-center vh-100">
-             <div className="text-center mb-5 pb-5">
-                <img src={selfie} alt="" className="img-fluid rounded-circle selfie-img" />          
-             </div>
-          </div>            
+         <div className="landing-slider-item">
+            <div className="card bg-transparent border-0 pt-5 mt-5">
+            <img src={selfie} alt="" className="img-fluid rounded-circle selfie-img" />
+            </div>
+         </div>            
     </div>
     <div className="footer fixed-bottom d-grid gap-3 m-3">
         <a href="#" class="btn btn-info btn-lg w-100 rounded-4">Buscar na galeria</a>
