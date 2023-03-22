@@ -510,10 +510,10 @@ a {
     padding: 12px 10px;
 }
 .doctor-profile-tabs button.active {
-    color: #14BEF0 !important;
+    color: #fff !important;
     border-bottom: 3px solid;
     font-weight: 500;
-    background: #eefbff;
+    background: #FF5A51;
     border-top: 3px solid #eefbff;
 }
 .review-profile {

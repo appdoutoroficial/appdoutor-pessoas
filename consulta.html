@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="img/logo.svg" type="image/png">
+      <title>Dra Regina Biasoli - Agenda</title>
+      <!-- Bootstrap css -->
+      <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.min.css">
+      <!-- Bootstrap icon -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+      <!-- Sidebar css -->
+      <link rel="stylesheet" href="vender/sidebar/demo.css">
+      <!-- Matrial Icons -->
+   <link rel="stylesheet" href="vender/materialdesign/css/materialdesignicons.min.css">
+   <!-- Custom css -->
+   <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body class="bg-light">
+      <!-- navbar -->
+      <div class="request-appointment d-flex flex-column vh-100">
+         <div class="d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm osahan-header">
+            <a href="home.html" class="text-dark bg-white shadow rounded-circle icon">
+                  <span class="mdi mdi-arrow-left mdi-18px"></span></a>
+            <h6 class="mb-0 ms-3 me-auto fw-bold">Minhas consultas</h6>
+            <div class="d-flex align-items-center gap-3">
+               <a class="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5" href="#"><i class="bi bi-list"></i></a>
+            </div>
+         </div>
+         <!-- body -->
+         <div class="vh-100 my-auto overflow-auto body-fix-osahan-footer">
+            <ul class="nav doctor-profile-tabs mb-2 shadow-sm" id="pills-tab" role="tablist">
+               <li class="nav-item col" role="presentation">
+                  <button class="nav-link w-100 active" id="pills-upcoming-tab" data-bs-toggle="pill"
+                     data-bs-target="#pills-upcoming" type="button" role="tab" aria-controls="pills-upcoming"
+                     aria-selected="true">Agendadas</button>
+               </li>
+               <li class="nav-item col" role="presentation">
+                  <button class="nav-link w-100" id="pills-past-tab" data-bs-toggle="pill"
+                     data-bs-target="#pills-past" type="button" role="tab" aria-controls="pills-past"
+                     aria-selected="false">Antigas</button>
+               </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+               <!-- upcoming -->
+               <div class="tab-pane fade show active" id="pills-upcoming" role="tabpanel"
+                  aria-labelledby="pills-upcoming-tab" tabindex="0">
+                  <a href="my-appointment-upcoming.html" class="link-dark">
+                     <div class="bg-white d-flex align-items-center gap-3 p-3 mb-1 shadow-sm">                       
+                        <div>
+                           <h6 class="mb-1">Dra Regina Biasoli</h6>
+                           <p class="text-muted mb-2">Hematologista e Clínica Geral</p>
+                           <p class="text-muted m-0"><span class="mdi mdi-calendar-month text-primary me-1"></span>05 Abr
+                              2023
+                           </p>
+                        </div>
+                        <div class="ms-auto">
+                           <div class="d-flex justify-content-end">
+                              <div class="bg-info-subtle rounded-circle icon mb-3">
+                                 <span class="mdi mdi-phone-outline mdi-18px text-info"></span>
+                              </div>
+                           </div>
+                           <span class="badge bg-success-subtle text-success fw-normal rounded-pill px-2">Confirmado</span>
+                        </div>
+                     </div>
+                  </a>                   
+               </div>
+               <!-- past -->
+               <div class="tab-pane fade" id="pills-past" role="tabpanel" aria-labelledby="pills-past-tab"
+                  tabindex="0">
+                  <a href="#" class="link-dark">
+                    <div class="bg-white d-flex align-items-center gap-3 p-3 mb-1 shadow-sm">                       
+                       <div>
+                          <h6 class="mb-1">Dra Regina Biasoli</h6>
+                          <p class="text-muted mb-2">Hematologista e Clínica Geral</p>
+                          <p class="text-muted m-0"><span class="mdi mdi-calendar-month text-primary me-1"></span>05 Abr
+                             2023
+                          </p>
+                       </div>
+                       <div class="ms-auto">
+                          <div class="d-flex justify-content-end">
+                             <div class="bg-info-subtle rounded-circle icon mb-3">
+                                <span class="mdi mdi-phone-outline mdi-18px text-info"></span>
+                             </div>
+                          </div>
+                          <span class="badge bg-success-subtle text-success fw-normal rounded-pill px-2">Completo</span>
+                       </div>
+                    </div>
+                 </a> 
+                 <a href="#" class="link-dark">
+                    <div class="bg-white d-flex align-items-center gap-3 p-3 mb-1 shadow-sm">                       
+                       <div>
+                          <h6 class="mb-1">Dra Regina Biasoli</h6>
+                          <p class="text-muted mb-2">Hematologista e Clínica Geral</p>
+                          <p class="text-muted m-0"><span class="mdi mdi-calendar-month text-primary me-1"></span>05 Abr
+                             2023
+                          </p>
+                       </div>
+                       <div class="ms-auto">
+                          <div class="d-flex justify-content-end">
+                             <div class="bg-info-subtle rounded-circle icon mb-3">
+                                <span class="mdi mdi-phone-outline mdi-18px text-info"></span>
+                             </div>
+                          </div>
+                          <span class="badge bg-success-subtle text-success fw-normal rounded-pill px-2">Completo</span>
+                       </div>
+                    </div>
+                 </a> 
+                 <a href="#" class="link-dark">
+                    <div class="bg-white d-flex align-items-center gap-3 p-3 mb-1 shadow-sm">                       
+                       <div>
+                          <h6 class="mb-1">Dra Regina Biasoli</h6>
+                          <p class="text-muted mb-2">Hematologista e Clínica Geral</p>
+                          <p class="text-muted m-0"><span class="mdi mdi-calendar-month text-primary me-1"></span>05 Abr
+                             2023
+                          </p>
+                       </div>
+                       <div class="ms-auto">
+                          <div class="d-flex justify-content-end">
+                             <div class="bg-info-subtle rounded-circle icon mb-3">
+                                <span class="mdi mdi-phone-outline mdi-18px text-info"></span>
+                             </div>
+                          </div>
+                          <span class="badge bg-success-subtle text-success fw-normal rounded-pill px-2">Completo</span>
+                       </div>
+                    </div>
+                 </a>                
+               </div>
+            </div>
+         </div>
+            
+         <div class="footer mt-auto p-3 fix-osahan-footer">
+            <div
+               class="d-flex align-items-center justify-content-between rounded-4 shadow overflow-hidden bottom-nav-main">
+               <a href="home.html" class="col footer-bottom-nav active">
+                  <span class="mdi mdi-home-variant-outline mdi-24px"></span>
+                  <span>Home</span>
+               </a>
+               <a href="search.html" class="col footer-bottom-nav">
+                  <span class="mdi mdi-magnify mdi-24px"></span>
+                  <span>Pesquisar</span>
+               </a>
+               <a href="video.html" class="col footer-bottom-nav">
+                  <span class="mdi mdi-video-outline mdi-24px"></span>
+                  <span>Telemedicina</span>
+               </a>
+               <a href="message.html" class="col footer-bottom-nav">
+                  <span class="mdi mdi-message-processing-outline mdi-24px"></span>
+                  <span>Chat</span>
+               </a>
+               <a href="my-profile.html" class="col footer-bottom-nav">
+                  <span class="mdi mdi-account-outline mdi-24px"></span>
+                  <span>Perfil</span>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- sidebar nav -->
+      <nav id="main-nav">
+         <ul class="second-nav">
+            <li class="osahan-user-profile bg-primary">
+               <div class="d-flex align-items-center gap-2">
+                  <img src="img/perf1.jpeg" alt="" class="rounded-pill img-fluid">
+                  <div class="ps-1">
+                     <h6 class="fw-bold text-white mb-0">Arthur Bastos</h6>
+                     <p class="text-white-50 m-0 small">(11) 95599-9988</p>
+                  </div>
+               </div>
+            </li>           
+            <li><a href="notification.html"><span class="mdi mdi-bell-outline me-3"></span>Notificações</a></li>
+            <li><a href="home.html"><span class="mdi mdi-home-variant-outline me-3"></span>Home</a></li>                              
+            <li><a href="pagamento.html"><span class="mdi mdi-file-table-box-outline me-3"></span>Pagamento</a></li>         
+            <li>
+               <a href="#"><span class="mdi mdi-account-outline me-3"></span>Opções</a>
+               <ul>
+                  <li><a href="my-profile.html"><span class="mdi mdi-account-outline me-3"></span>Minha conta</a></li>
+                  <li><a href="my-appointment-upcoming.html"><span class="mdi mdi-calendar-clock me-3"></span>Próximas consultas</a></li>
+                  <li><a href="my-appointment.html"><span class="mdi mdi-calendar-range me-3"></span>Minhas consultas</a></li>
+                  <li><a href="history.html"><span class="mdi mdi-history me-3"></span>Histórico</a></li>
+                  <li><a href="favorite-doctor.html"><span class="mdi mdi-cards-heart-outline me-3"></span>Favoritos</a></li>
+                  <li><a href="change-profile.html"><span class="mdi mdi-square-edit-outline me-3"></span>Editar conta</a></li>
+               </ul>
+            </li>
+            <li><a href="video.html"><span class="mdi mdi-video-outline me-3"></span>Telemedicina</a></li>           
+            <li><a href="message.html"><span class="mdi mdi-message-processing-outline me-3"></span>Mensagens</a></li>
+            <li><a href="chat.html"><span class="mdi mdi-chat-processing-outline me-3"></span>Chat</a></li>
+            <li><a href="review.html"><span class="mdi mdi-star-half-full me-3"></span>Avaliar especialista</a></li>
+            <li><a href="index.html"><span class="mdi mdi-login me-3"></span>Sair</a></li>
+         </ul>       
+      </nav>
+      <!-- Bootstrap bundle js -->
+      <script src="vender/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Jquery js -->
+      <script src="vender/jquery/jquery.min.js"></script>
+      <!-- Sidebar js -->
+      <script src="vender/sidebar/hc-offcanvas-nav.js"></script>
+      <!-- Custom js -->
+      <script src="js/script.js"></script>
+   </body>
+</html>
