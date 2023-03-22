@@ -608,11 +608,11 @@ body.hc-nav-open {
 .wrapper {
 	max-width: 800px;
 	margin: 0 auto;
-	padding: 0 20px
+	padding: 0 20px;
 }
 
 #main-nav {
-	display: none
+	display: none;	
 }
 
 
