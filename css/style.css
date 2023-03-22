@@ -38,7 +38,7 @@ Version: 0.1
 
 :root {
     --dark: #1b1e42;
-    --primary: #014CC4;
+    --primary: #FF5A51;
     --light-primary: #01BDF3;
     --lighter-primary: #598fff;
     --lighter-primary-opacity: #e9f2ff;
@@ -157,13 +157,13 @@ li.nav-parent.level-open h2 {
     background-color: var(--light-orange);
 }
 .btn-primary, .btn-outline-primary:hover, .btn-outline-primary:focus {
-    background: #0147ff !important;
-    border-color:#0147ff !important;
+    background: #FF5A51 !important;
+    border-color:#FF5A51!important;
 }
 .btn-outline-primary{
     background-color: #ffffff !important;
-    border-color:#0147ff !important;
-    color: #0147ff !important;
+    border-color:#FF5A51 !important;
+    color: #FF5A51 !important;
 }
 .btn-outline-primary:hover, .btn-outline-primary:focus{
     color: #ffffff !important;
@@ -183,14 +183,14 @@ li.nav-parent.level-open h2 {
 }
 
 .btn-info, .btn-outline-info:hover, .btn-outline-info:focus {
-    background: #d12ad3!important;
-    border-color: #d12ad3 !important;
+    background: #FF5A51!important;
+    border-color: #FF5A51 !important;
     color:#ffffff !important;
 }
 .btn-outline-info{
     background-color: #ffffff !important;
-    border-color: #d12ad3!important;
-    color: #d12ad3 !important;
+    border-color: #FF5A51!important;
+    color: #FF5A51!important;
 }
 .btn-outline-info:hover, .btn-outline-info:focus{
     color: #ffffff !important;
@@ -361,13 +361,13 @@ a {
     font-size: 20px;
 }
 .footer-bottom-nav.active {
-    color: #0148ff;
+    color: #FF5A51;
 }
 .footer-bottom-nav.active:after {
     content: "";
     width: 40px;
     height: 10px;
-    background: #0148ff;
+    background: #FF5A51;
     border-radius: 50px;
     position: absolute;
     bottom: -7px;
@@ -632,7 +632,7 @@ a {
 
 
 .user-icon {
-    color: #d12ad3!important;
+    color: #FF5A51!important;
 }
 
 .secundario {
@@ -640,10 +640,33 @@ a {
 }
 
 .primario {
-    color: #d12ad3 !important;
+    color: #FF5A51 !important;
 }
 
 .selfie-img {
     width: 300px;
     border-radius: 10px !important;
+}
+
+.bg-1 {
+    background-image: url(../img/Hemocromatose-1.png);
+   
+}
+
+.btn-selec {
+    background-color: #FF5A51;
+    border: #FF5A51;
+    color: #fff;
+}
+
+.text-1 {
+    color: #FF5A51;
+}
+
+.color {
+    color: #FF5A51;
+}
+
+.space {
+    margin-top: 60px;
 }
