@@ -23,7 +23,7 @@ Version: 0.1
         disableAt: false,
         customToggle: $toggle,
         levelSpacing: 40,
-        navTitle: 'Dactorapp',
+        navTitle: 'Dra Regina Biasoli',
         levelTitles: true,
         levelTitleAsBack: true,
         pushContent: '#container',
