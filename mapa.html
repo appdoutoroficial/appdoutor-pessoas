@@ -5,7 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" href="img/logo-app.png.png" type="image/png">
-      <title>Dra Regina Biasoli - </title>
+      <title>Dra Regina Biasoli - Rota</title>
       <!-- Bootstrap css -->
       <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.min.css">
       <!-- Bootstrap icon -->
@@ -23,7 +23,7 @@
          <div class="d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm osahan-header">
             <a href="home.html" class="text-dark bg-white shadow rounded-circle icon">
                   <span class="mdi mdi-arrow-left mdi-18px"></span></a>
-            <h6 class="mb-0 ms-3 me-auto fw-bold">Minhas receitas</h6>
+            <h6 class="mb-0 ms-3 me-auto fw-bold">Informações da clínica</h6>
             <div class="d-flex align-items-center gap-3">
                <a class="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5" href="#"><i class="bi bi-list"></i></a>
             </div>
@@ -32,46 +32,51 @@
          <div class="vh-100 my-auto overflow-auto body-fix-osahan-footer">
             <div class="p-3">
                <div class="bg-white rounded-4 px-3 pt-3 overflow-hidden edit-profile-back shadow mb-3">
-                  <h6 class="pb-2">Perfil</h6>
+                  <h6 class="pb-2">Clínica Dra. Regina Biasoli</h6>
                   <div class="d-flex">
                      <div class="col">
-                        <p><span class="text-muted small">Nome</span><br>Arthur Bastos</p>
-                     </div>
-                     <div class="col">
-                        <p><span class="text-muted small">Nascimento</span><br>07 Jan 2000</p>
-                     </div>
+                        <p><span class="text-1 fw-bold">ENDEREÇO</span><br>Rua Doutor Veiga Filho, 350 – Cj.1103.</p>
+                     </div>                     
                   </div>
                   <div class="d-flex">
                      <div class="col">
-                        <p><span class="text-muted small">Genero</span><br>Masc</p>
+                        <p><span class="text-1 fw-bold">BAIRRO</span><br>Higienópolis – SP</p>
                      </div>
                      <div class="col">
-                        <p><span class="text-muted small">Contato</span><br>(11) 95588-9955</p>
-                     </div>
+                        <p><span class="text-1 fw-bold">CIDADE</span><br>São Paulo</p>
+                     </div>                    
                   </div>
                   <div class="d-flex">
-                     <div class="col">
-                        <p><span class="text-muted small">E-mail</span><br>arthur@gmail.com</p>
+                    <div class="col">
+                        <p><span class="text-1 fw-bold">CONTATO</span><br>(11) 95588-9955<br>(11) 95588-9955</p>
                      </div>
                      <div class="col">
-                        <p><span class="text-muted small">Cidade</span><br>São Paulo</p>
+                        <p><span class="text-1 fw-bold">E-MAIL</span><br>clinica@gmail.com</p>
+                     </div>                  
+                  </div> 
+                  <div class="d-flex">
+                    <div class="col">
+                        <p><span class="text-1 fw-bold">ATENDIMENTO</span><br>3ª e 5ª Das 13h às 17h<br>4ª e 6ª Das 8h às 11h</p>
                      </div>
-                  </div>
-                  <a href="change-profile.html" class="link-dark">
-                     <div class="edit-profile-icon bg-primary text-white">
-                        <span class="mdi mdi-square-edit-outline h2 m-0 pt-3 pe-2"></span>
-                     </div>
-                  </a>
-               </div>
-               <div class="rounded-4 shadow overflow-hidden">
-                  <a href="minha-receita.html" class="link-dark">
-                     <div class="bg-white d-flex align-items-center justify-content-between p-3 border-bottom">
-                        <h6 class="m-0">Minhas receitas</h6>
-                        <span class="mdi mdi-chevron-right mdi-24px icon shadow rounded-pill"></span>
-                     </div>
-                  </a>                   
-               </div>
+                     <div class="col">
+                        <p><span class="text-1 fw-bold">INFO</span><br>Informação a definir</p>
+                     </div>                  
+                  </div>                
+                     <div class="edit-profile-icon bg-primary text-white"></div>                 
+               </div>              
             </div>
+            <!--Mapa-->
+            <div class="p-3">
+                <div class="bg-white rounded-4 px-3 pt-3 overflow-hidden edit-profile-back shadow mb-3">
+                   <h6 class="pb-2">Como chegar</h6>
+                   <div class="d-flex">
+                    <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                        <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+                        <a href="https://1map.com/pt/map-embed">1 Map</a>
+                    </div>                                          
+                   </div>                                                               
+                </div>              
+             </div>
          </div>     
          <div class="footer mt-auto p-3 fix-osahan-footer">
             <div
@@ -80,7 +85,7 @@
                   <span class="mdi mdi-home-variant-outline mdi-24px"></span>
                   <span>Home</span>
                </a>
-               <a href="pesquisar.html" class="col footer-bottom-nav">
+               <a href="search.html" class="col footer-bottom-nav">
                   <span class="mdi mdi-magnify mdi-24px"></span>
                   <span>Pesquisar</span>
                </a>
@@ -112,8 +117,8 @@
                </div>
             </li>           
             <li><a href="notification.html"><span class="mdi mdi-bell-outline me-3"></span>Notificações</a></li>
-            <li><a href="home.html"><span class="mdi mdi-home-variant-outline me-3"></span>Home</a></li>     
-            <li><a href="mapa.html"><span class="mdi mdi-car me-3"></span>Rota</a></li>                              
+            <li><a href="home.html"><span class="mdi mdi-home-variant-outline me-3"></span>Home</a></li> 
+            <li><a href="mapa.html"><span class="mdi mdi-car me-3"></span>Rota</a></li>                                  
             <li><a href="pagamento.html"><span class="mdi mdi-file-table-box-outline me-3"></span>Pagamento</a></li>         
             <li>
                <a href="#"><span class="mdi mdi-account-outline me-3"></span>Opções</a>
@@ -141,5 +146,20 @@
       <script src="vender/sidebar/hc-offcanvas-nav.js"></script>
       <!-- Custom js -->
       <script src="js/script.js"></script>
+
+      <script>(function () {
+        var setting = {"height":350,"width":500,"zoom":17,"queryString":"Rua Doutor Veiga Filho, 350 - Santa Cecilia, São Paulo - SP, Brasil","place_id":"ChIJIStU_TxYzpQRr2cZx82HfhM","satellite":false,"centerCoord":[-23.54004580691816,-46.65911315],"cid":"0x137e87cdc71967af","lang":"pt","cityUrl":"/brazil/sao-paulo","cityAnchorText":"","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"904723"};
+        var d = document;
+        var s = d.createElement('script');
+        s.src = 'https://1map.com/js/script-for-user.js?embed_id=904723';
+        s.async = true;
+        s.onload = function (e) {
+          window.OneMap.initMap(setting)
+        };
+        var to = d.getElementsByTagName('script')[0];
+        to.parentNode.insertBefore(s, to);
+      })();
+      
+      </script>
    </body>
 </html>
