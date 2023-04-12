@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="img/logo-app.png.png" type="image/png">
+      <title>Dra Regina Biasoli - </title>
+      <!-- Bootstrap css -->
+      <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.min.css">
+      <!-- Bootstrap icon -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+      <!-- Sidebar css -->
+      <link rel="stylesheet" href="vender/sidebar/demo.css">
+      <!-- Matrial Icons -->
+   <link rel="stylesheet" href="vender/materialdesign/css/materialdesignicons.min.css">
+   <!-- Custom css -->
+   <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body class="bg-light">
+      <!-- navbar -->
+      <div class="request-appointment d-flex flex-column vh-100">
+         <div class="d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm osahan-header">
+            <a href="home.html" class="text-dark bg-white shadow rounded-circle icon">
+                  <span class="mdi mdi-arrow-left mdi-18px"></span></a>
+            <h6 class="mb-0 ms-3 me-auto fw-bold">Informações de consulta</h6>
+            <div class="d-flex align-items-center gap-3">
+               <a class="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5" href="#"><i class="bi bi-list"></i></a>
+            </div>
+         </div>
+         <!-- body -->
+         <div class="vh-100 my-auto overflow-auto body-fix-osahan-footer">
+            <div class="p-3">
+               <div class="bg-white rounded-4 px-3 pt-3 overflow-hidden edit-profile-back shadow mb-3">
+                  <h6 class="pb-2">Perfil</h6>
+                  <div class="d-flex">
+                     <div class="col">
+                        <p><span class="text-muted small">Nome</span><br>Arthur Bastos</p>
+                     </div>
+                     <div class="col">
+                        <p><span class="text-muted small">Nascimento</span><br>07 Jan 2000</p>
+                     </div>
+                  </div>
+                  <div class="d-flex">
+                     <div class="col">
+                        <p><span class="text-muted small">Genero</span><br>Masc</p>
+                     </div>
+                     <div class="col">
+                        <p><span class="text-muted small">Contato</span><br>(11) 95588-9955</p>
+                     </div>
+                  </div>
+                  <div class="d-flex">
+                     <div class="col">
+                        <p><span class="text-muted small">E-mail</span><br>arthur@gmail.com</p>
+                     </div>
+                     <div class="col">
+                        <p><span class="text-muted small">Cidade</span><br>São Paulo</p>
+                     </div>
+                  </div>
+                  <a href="change-profile.html" class="link-dark">
+                     <div class="edit-profile-icon bg-primary text-white">
+                        <span class="mdi mdi-square-edit-outline h2 m-0 pt-3 pe-2"></span>
+                     </div>
+                  </a>
+               </div>
+               
+               <div class="bg-white rounded-4 px-3 pt-3 overflow-hidden edit-profile-back shadow mb-3">
+               
+                  
+                        
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Status da consulta</h6>
+                                    <div id="content">
+                                        <ul class="timeline">
+                                            <li class="event" data-date="12:30 - 1:00pm">
+                                                <h3>Pedido de Consulta recebido</h3>                                                
+                                            </li>
+                                            <li class="event" data-date="2:30 - 4:00pm">
+                                                <h3>Aguardando pagamento</h3>                                                
+                                            </li>
+                                            <li class="event" data-date="5:00 - 8:00pm">
+                                                <h3>Pagamento realizado</h3>                                                
+                                            </li>
+                                            <li class="event" data-date="8:30 - 9:30pm">
+                                                <h3>Consulta marcada</h3>                                                
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>                         
+                        </div>  
+                              
+                     </div>
+         </div>     
+         <div class="footer mt-auto p-3">
+            <a href="home.html" class="btn btn-info btn-lg w-100 rounded-4">Avançar</a>
+         </div>
+      </div>
+      <!-- sidebar nav -->
+      <nav id="main-nav">
+         <ul class="second-nav">
+            <li class="osahan-user-profile bg-primary">
+               <div class="d-flex align-items-center gap-2">
+                  <img src="img/perf1.jpeg" alt="" class="rounded-pill img-fluid">
+                  <div class="ps-1">
+                     <h6 class="fw-bold text-white mb-0">Arthur Bastos</h6>
+                     <p class="text-white-50 m-0 small">(11) 95599-9988</p>
+                  </div>
+               </div>
+            </li>           
+            <li><a href="notification.html"><span class="mdi mdi-bell-outline me-3"></span>Notificações</a></li>
+            <li><a href="home.html"><span class="mdi mdi-home-variant-outline me-3"></span>Home</a></li>      
+            <li><a href="mapa.html"><span class="mdi mdi-car me-3"></span>Rota</a></li>                             
+            <li><a href="pagamento.html"><span class="mdi mdi-file-table-box-outline me-3"></span>Pagamento</a></li>         
+            <li>
+               <a href="#"><span class="mdi mdi-account-outline me-3"></span>Opções</a>
+               <ul>
+                  <li><a href="my-profile.html"><span class="mdi mdi-account-outline me-3"></span>Minha conta</a></li>
+                  <li><a href="my-appointment-upcoming.html"><span class="mdi mdi-calendar-clock me-3"></span>Próximas consultas</a></li>
+                  <li><a href="my-appointment.html"><span class="mdi mdi-calendar-range me-3"></span>Minhas consultas</a></li>
+                  <li><a href="history.html"><span class="mdi mdi-history me-3"></span>Histórico</a></li>
+                  <li><a href="favorite-doctor.html"><span class="mdi mdi-cards-heart-outline me-3"></span>Favoritos</a></li>
+                  <li><a href="change-profile.html"><span class="mdi mdi-square-edit-outline me-3"></span>Editar conta</a></li>
+               </ul>
+            </li>
+            <li><a href="video.html"><span class="mdi mdi-video-outline me-3"></span>Telemedicina</a></li>           
+            <li><a href="chat.html"><span class="mdi mdi-message-processing-outline me-3"></span>Mensagens</a></li>
+            <li><a href="chat.html"><span class="mdi mdi-chat-processing-outline me-3"></span>Chat</a></li>
+            <li><a href="review.html"><span class="mdi mdi-star-half-full me-3"></span>Avaliar especialista</a></li>
+            <li><a href="index.html"><span class="mdi mdi-login me-3"></span>Sair</a></li>
+         </ul>       
+      </nav>
+      <!-- Bootstrap bundle js -->
+      <script src="vender/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Jquery js -->
+      <script src="vender/jquery/jquery.min.js"></script>
+      <!-- Sidebar js -->
+      <script src="vender/sidebar/hc-offcanvas-nav.js"></script>
+      <!-- Custom js -->
+      <script src="js/script.js"></script>
+   </body>
+</html>
