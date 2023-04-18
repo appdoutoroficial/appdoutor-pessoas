@@ -295,7 +295,7 @@ a {
 .logo {
     width: 100px;
 }
-.top-doctor-item, .recent-doctor-item, .available-doctor-item {
+.top-doctor-item, .recent-doctor-item, .available-doctor-item {   
     margin: 4px 5px;
 }
 /* Landing Page */
@@ -325,7 +325,7 @@ a {
 }
 .landing ul.slick-dots li.slick-active button {
     background: var(--primary);
-    border-color: var(--primary);
+    border-color: var(--primary);    
 }
 .landing-slider-item img {
     height: 230px;
@@ -699,6 +699,14 @@ a {
     margin: auto;
     border-radius: 10px;
   }
+
+
+  .box-perf3 {
+    width: 95%;
+    height: 245px;   
+    margin: auto;
+    border-radius: 10px;
+  }
   
 
   
@@ -1032,4 +1040,8 @@ tl-item.active .tl-dot:before {
 .card-doc {
     width: 95%;
     margin: auto;
+}
+
+.bx-ft img {
+    border-radius: 10px;
 }
