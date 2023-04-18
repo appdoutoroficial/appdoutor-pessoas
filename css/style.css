@@ -297,6 +297,7 @@ a {
 }
 .top-doctor-item, .recent-doctor-item, .available-doctor-item {   
     margin: 4px 5px;
+    
 }
 /* Landing Page */
 .landing ul.slick-dots {
@@ -678,6 +679,10 @@ a {
     margin-top: 60px;
 }
 
+.space1 {
+    margin-top: 100px;
+}
+
 
 .box-perf1 img {
     width: 100px;
@@ -1049,3 +1054,4 @@ tl-item.active .tl-dot:before {
 .txt-sobre1 {
     margin-top: 15px;
 }
+
