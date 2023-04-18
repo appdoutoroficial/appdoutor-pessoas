@@ -46,7 +46,7 @@ Version: 0.1
         arrows: false,
         speed: 300,
         autoplay: false,
-        slidesToShow: 2.2,
+        slidesToShow: 1.0,
         slidesToScroll: 1,
     });
 
