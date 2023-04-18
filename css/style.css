@@ -685,11 +685,11 @@ a {
 
 
 .box-perf1 img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     border: 5px solid #fff;
-    margin-left: 264px;
+    margin-left: 270px;
     margin-top: -70px;
     z-index: 1;
     position: absolute;
