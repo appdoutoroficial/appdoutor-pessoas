@@ -1066,3 +1066,92 @@ tl-item.active .tl-dot:before {
     color: #808080;
     text-align: start;
 }
+
+
+@media only screen and (min-width: 360px) {
+    .box-perf1 img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        margin-left: 275px;
+        margin-top: -65px;
+        z-index: 1;
+        position: absolute;
+        display: block !important;
+      }
+}
+
+@media only screen and (min-width: 375px) {
+    .box-perf1 img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        margin-left: 290px;
+        margin-top: -65px;
+        z-index: 1;
+        position: absolute;
+        display: block !important;
+      }
+}
+
+@media only screen and (min-width: 414px) {
+    .box-perf1 img {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        margin-left: 326px;
+        margin-top: -65px;
+        z-index: 1;
+        position: absolute;
+        display: block !important;
+      }
+}
+
+@media only screen and (min-width: 480px) {
+    .box-perf1 img {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        margin-left: 288px;
+        margin-top: -65px;
+        z-index: 1;
+        position: absolute;
+        display: block !important;
+      }
+}
+
+
+@media only screen and (min-width: 500px) {
+    .box-perf1 img {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        margin-left: 400px;
+        margin-top: -65px;
+        z-index: 1;
+        position: absolute;
+        display: block !important;
+      }
+}
+
+@media only screen and (min-width: 768px) {
+    .box-perf1 img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        margin-left: 660px;
+        margin-top: -65px;
+        z-index: 1;
+        position: absolute;
+        display: block !important;
+      }
+      .txt3 {
+        margin-left: 20px;
+      }
+}
