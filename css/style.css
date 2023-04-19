@@ -1226,3 +1226,20 @@ tl-item.active .tl-dot:before {
         margin-left: 20px;
       }
 }
+
+@media only screen and (min-width: 1300px) {
+    .box-perf1 img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        margin-left: 1195px;
+        margin-top: -65px;
+        z-index: 1;
+        position: absolute;
+        display: block !important;
+      }
+      .txt3 {
+        margin-left: 20px;
+      }
+}
