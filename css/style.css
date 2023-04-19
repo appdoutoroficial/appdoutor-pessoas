@@ -1196,6 +1196,20 @@ tl-item.active .tl-dot:before {
       }
 }
 
+@media only screen and (min-width: 620px) {
+    .box-perf1 img {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        margin-left: 518px;
+        margin-top: -65px;
+        z-index: 1;
+        position: absolute;
+        display: block !important;
+      }
+}
+
 @media only screen and (min-width: 768px) {
     .box-perf1 img {
         width: 90px;
