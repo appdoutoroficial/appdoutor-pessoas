@@ -1055,3 +1055,6 @@ tl-item.active .tl-dot:before {
     margin-top: 15px;
 }
 
+.blue-logo {
+    border-radius: 50%;
+}
