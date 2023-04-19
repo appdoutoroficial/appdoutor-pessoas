@@ -1053,9 +1053,15 @@ tl-item.active .tl-dot:before {
 
 .txt-sobre1 {
     margin-top: 15px;
+    color: #274472;
 }
 
 .blue-logo {
     border-radius: 50%;
     width: 70%;
+}
+
+.txt-2 {
+    color: #808080;
+    text-align: start;
 }
