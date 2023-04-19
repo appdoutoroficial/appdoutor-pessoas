@@ -341,10 +341,6 @@ a {
 .logo-app {
     width: 300px;
     border-radius: 100%;
-    position: fixed;
-    display: block;
-    overflow: hidden;
-
 }
 /* Footer Nav */
 .body-fix-osahan-footer {
