@@ -1053,7 +1053,8 @@ tl-item.active .tl-dot:before {
 
 .txt-sobre1 {
     margin-top: 15px;
-    color: #274472;
+    color: #4870b0;
+    font-weight: bold;
 }
 
 .blue-logo {
