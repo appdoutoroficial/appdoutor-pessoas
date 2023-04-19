@@ -1096,6 +1096,35 @@ tl-item.active .tl-dot:before {
       }
 }
 
+@media only screen and (min-width: 390px) {
+    .box-perf1 img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        margin-left: 305px;
+        margin-top: -65px;
+        z-index: 1;
+        position: absolute;
+        display: block !important;
+      }
+}
+
+@media only screen and (min-width: 412px) {
+    .box-perf1 img {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        margin-left: 320px;
+        margin-top: -65px;
+        z-index: 1;
+        position: absolute;
+        display: block !important;
+      }
+}
+
+
 @media only screen and (min-width: 414px) {
     .box-perf1 img {
         width: 85px;
