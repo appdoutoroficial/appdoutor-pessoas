@@ -34,7 +34,7 @@ const Signin = () => {
                         <label className="form-check-label" for="flexSwitchCheckDefault">Lembrar-me</label>
                     </div>
                     <div>
-                        <a href="/admin/index" className="btn btn-info btn-lg w-100 rounded-4 mb-2">Entrar</a>
+                        <a href="/inicio" className="btn btn-info btn-lg w-100 rounded-4 mb-2">Entrar</a>
                         <div className="d-flex justify-content-between mt-2">
                         <a href="/recuperar-senha" className="d-flex justify-content-end small text-primary">Esqueceu sua senha?</a>
                         <p className="text-muted text-end small">Ainda não tem cadastro? <a className="text-primary" href="sign-up.html">Registre-se</a></p>
