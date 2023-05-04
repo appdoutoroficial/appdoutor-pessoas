@@ -1,11 +1,33 @@
 import React, { useState, useEffect } from "react";
+import Slider from "react-slick"
 import photo from "../../assets/img/ft_perfil.png"
+import NavBar from "../../components/NavBar";
 
 
 const Video = () => {
-    return (
+
+  var settings = {
+    dots: false,
+    nav: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+ };
+ 
+ var availableDoctor = {
+  infinite: false,
+  dots: false,
+  arrows: false,
+  speed: 300,
+  autoplay: false,
+  slidesToShow: 2.1,
+  slidesToScroll: 1,    
+ };
+
+    return (   
         <div className="video d-flex flex-column vh-100">
-  {/* navbar */}
+  {/* navbar */} 
   <div className="bg-white d-flex align-items-center justify-content-between shadow-sm mb-auto p-3">
     <h5 className="m-0">
       Telemedicina
@@ -58,7 +80,7 @@ const Video = () => {
       <h6 className="mb-2 pb-1 fw-bold px-3 text-1">
         Especialistas pesquisados recentemente
       </h6>
-      <div className="recent-doctors">
+      <Slider {...availableDoctor} className="recent-doctors">
         <div className="recent-item ms-3 me-2">
           <a href="#" className="link-dark">
             <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
@@ -116,7 +138,7 @@ const Video = () => {
             </div>
           </a>
         </div>
-      </div>
+      </Slider>
     </div>
     {/* available */}
     <div className="p-3">
@@ -271,6 +293,8 @@ const Video = () => {
     </div>
   </div>
 </div>
+
+
 
     )
 }

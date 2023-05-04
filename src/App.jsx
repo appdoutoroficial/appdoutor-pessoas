@@ -37,6 +37,7 @@ import Receita from "./pages/receita/Receita";
 import Review from "./pages/review/Review";
 import Sobre from "./pages/sobre/Sobre";
 import Video from "./pages/video/Video";
+import CadastrarCartao from "./pages/cadastrar-cartao/CadastrarCartao";
 
 
 
@@ -47,6 +48,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './App.scss'
 import "./components/NavBar";
+import NavBar from "./components/NavBar";
+
 
 function App() {
   let element = useRoutes([
@@ -87,6 +90,7 @@ function App() {
     {path: '/review', exact: true, element: < Review/>},
     {path: '/sobre', exact: true, element: < Sobre/>},
     {path: '/video', exact: true, element: < Video/>},
+    {path: '/cadastrar-cartao', exact: true, element: < CadastrarCartao/>},
 
   ]);
 
@@ -96,7 +100,7 @@ function App() {
 const AppWrapper = () => {
   return (
     <Router>
-      <App />   
+      <App />        
     </Router>
   );
 };
