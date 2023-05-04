@@ -843,7 +843,6 @@ a {
 
 .bg-1 {
     background-image: url(assets/img/Hemocromatose-1.png);
-   
 }
 
 .btn-selec {
@@ -873,7 +872,6 @@ a {
     margin-top: 100px !important;
 }
 
-
 .box-perf1 img {
     width: 85px;
     height: 85px;
@@ -884,8 +882,7 @@ a {
     z-index: 1;
     position: absolute;
     display: block !important;
-  }
-
+}
 
 .box-perf2 {
     width: 95%;
@@ -893,18 +890,15 @@ a {
     background: linear-gradient(10deg, rgba(0, 0, 0, 1) 35%, rgba(253, 187, 45, 0) 100%);
     margin: auto;
     border-radius: 10px;
-  }
+}
 
-
-  .box-perf3 {
+.box-perf3 {
     width: 95%;
-    height: 245px;   
+    height: 245px;
     margin: auto;
     border-radius: 10px;
-  }
-  
+}
 
-  
 .card-img-1 {
     display: block;
     width: 100%;
@@ -913,42 +907,41 @@ a {
     border-radius: 10px;
     opacity: 0.3;
     cursor: pointer;
-  }
-  
-  .txt-photo {
+}
+
+.txt-photo {
     margin-top: -64px;
     margin-left: 15px;
     color: #fff;
     font-weight: bold;
     font-size: 15px;
-  }
-  
-  .txt-photo2 {
+}
+
+.txt-photo2 {
     margin-top: -15px;
     margin-left: 15px;
     color: #fff;
-  }
+}
 
-  .bx-agen {
+.bx-agen {
     width: 50%;
-  }
+}
 
-  .ic {
+.ic {
     font-size: 30px;
-  }
+}
 
-  .ft-age {
+.ft-age {
     width: 65px;
     margin: auto;
     margin-top: 20px;
-  }
+}
 
-  .ft-age1 {
-    width: 25px;    
-  }
+.ft-age1 {
+    width: 25px;
+}
 
-
-  .credit-card {
+.credit-card {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -1014,6 +1007,8 @@ a {
 .credit-card.visa .credit-card-last4:before {
     color: #8999e5;
 }
+
+
 /*   LOGOS  */
 
 .credit-card::after {
@@ -1029,13 +1024,11 @@ a {
     background-image: url('data:image/png;base64,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');
 }
 
-
 @media (min-width:992px) {
     .page-container {
         max-width: 1140px;
         margin: 0 auto
     }
-
     .page-sidenav {
         display: block !important
     }
@@ -1261,7 +1254,6 @@ tl-item.active .tl-dot:before {
     text-align: start;
 }
 
-
 @media only screen and (min-width: 360px) {
     .box-perf1 img {
         width: 80px;
@@ -1273,7 +1265,7 @@ tl-item.active .tl-dot:before {
         z-index: 1;
         position: absolute;
         display: block !important;
-      }
+    }
 }
 
 @media only screen and (min-width: 375px) {
@@ -1287,7 +1279,7 @@ tl-item.active .tl-dot:before {
         z-index: 1;
         position: absolute;
         display: block !important;
-      }
+    }
 }
 
 @media only screen and (min-width: 390px) {
@@ -1301,7 +1293,7 @@ tl-item.active .tl-dot:before {
         z-index: 1;
         position: absolute;
         display: block !important;
-      }
+    }
 }
 
 @media only screen and (min-width: 412px) {
@@ -1315,9 +1307,8 @@ tl-item.active .tl-dot:before {
         z-index: 1;
         position: absolute;
         display: block !important;
-      }
+    }
 }
-
 
 @media only screen and (min-width: 414px) {
     .box-perf1 img {
@@ -1330,7 +1321,7 @@ tl-item.active .tl-dot:before {
         z-index: 1;
         position: absolute;
         display: block !important;
-      }
+    }
 }
 
 @media only screen and (min-width: 480px) {
@@ -1344,9 +1335,8 @@ tl-item.active .tl-dot:before {
         z-index: 1;
         position: absolute;
         display: block !important;
-      }
+    }
 }
-
 
 @media only screen and (min-width: 500px) {
     .box-perf1 img {
@@ -1359,7 +1349,7 @@ tl-item.active .tl-dot:before {
         z-index: 1;
         position: absolute;
         display: block !important;
-      }
+    }
 }
 
 @media only screen and (min-width: 540px) {
@@ -1373,7 +1363,7 @@ tl-item.active .tl-dot:before {
         z-index: 1;
         position: absolute;
         display: block !important;
-      }
+    }
 }
 
 @media only screen and (min-width: 576px) {
@@ -1387,7 +1377,7 @@ tl-item.active .tl-dot:before {
         z-index: 1;
         position: absolute;
         display: block !important;
-      }
+    }
 }
 
 @media only screen and (min-width: 620px) {
@@ -1401,7 +1391,7 @@ tl-item.active .tl-dot:before {
         z-index: 1;
         position: absolute;
         display: block !important;
-      }
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1415,10 +1405,10 @@ tl-item.active .tl-dot:before {
         z-index: 1;
         position: absolute;
         display: block !important;
-      }
-      .txt3 {
+    }
+    .txt3 {
         margin-left: 20px;
-      }
+    }
 }
 
 @media only screen and (min-width: 1300px) {
@@ -1432,8 +1422,12 @@ tl-item.active .tl-dot:before {
         z-index: 1;
         position: absolute;
         display: block !important;
-      }
-      .txt3 {
+    }
+    .txt3 {
         margin-left: 20px;
-      }
+    }
+}
+
+.slick-slide {
+    margin-right: 60px;
 }

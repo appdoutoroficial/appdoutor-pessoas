@@ -81,7 +81,7 @@ const Video = () => {
         Especialistas pesquisados recentemente
       </h6>
       <Slider {...availableDoctor} className="recent-doctors">
-        <div className="recent-item ms-3 me-2">
+        <div className="recent-item ms-3 me-2 marginRightApp">
           <a href="#" className="link-dark">
             <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
               <img
@@ -100,7 +100,7 @@ const Video = () => {
             </div>
           </a>
         </div>
-        <div className="recent-item me-2">
+        <div className="recent-item me-2 marginRightApp">
           <a href="#" className="link-dark">
             <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
               <img
@@ -119,7 +119,7 @@ const Video = () => {
             </div>
           </a>
         </div>
-        <div className="recent-item me-2">
+        <div className="recent-item me-2 marginRightApp">
           <a href="#" className="link-dark">
             <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
               <img
