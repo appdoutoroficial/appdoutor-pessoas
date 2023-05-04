@@ -116,7 +116,6 @@ body {
 }
 
 
-
 /* Custom */
 
 .osahan-card-body {
@@ -393,7 +392,7 @@ a {
 .top-doctor-item,
 .recent-doctor-item,
 .available-doctor-item {
-    margin: 4px 5px;
+    // margin: 4px 5px;
 }
 
 
@@ -1429,6 +1428,13 @@ tl-item.active .tl-dot:before {
     }
 }
 
-.slick-slide {
-    margin-right: 60px;
+// .slick-slide {
+//     margin-right: 60px;
+// }
+.hc-offcanvas-nav.nav-position-left {
+    width: 70%;
+}
+
+#main-nav .d-flex.align-items-center.gap-2 {
+    padding: 10px 15px;
 }

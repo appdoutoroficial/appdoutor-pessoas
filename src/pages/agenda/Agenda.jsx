@@ -44,78 +44,80 @@ const  Agenda  = () => {
             <div className="cardHome">
                <h2 className="mb-2 pb-1 fw-bold px-3 text-1">CONSULTAS</h2> 
                <p className="mb-2 pb-1 fw-bold px-3 text-1">SELECIONE A ESPECIALIDADE</p>
-             </div>                                   
-                 
-             <Slider {...settingsDoctor} className="top-doctor-item">
+             </div>        
+
              <div className="mb-3"> 
-             <div className="top-doctors ps-2 ms-1">
-                  <div className="top-doctor-item" >
-                     <a href="/especialista" className="link-dark">
-                        <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
-                           <span className="mdi mdi-hospital text-1 text-center ic"></span>
-                           <div className="card-body small p-3 osahan-card-body">
-                              <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">HEMATOLOGIA</p>                              
+               <div className="top-doctors ps-2 ms-1"></div>
+                  <Slider {...settingsDoctor} className="top-doctor-item">
+                     <div className="top-doctor-item" >
+                        <a href="/especialista" className="link-dark">
+                           <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
+                              <span className="mdi mdi-hospital text-1 text-center ic"></span>
+                              <div className="card-body small p-3 osahan-card-body">
+                                 <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">HEMATOLOGIA</p>
+                              </div>
                            </div>
-                        </div>
-                     </a>
-                  </div>
-                  <div className="top-doctor-item">
-                     <a href="/especialista" className="link-dark">
-                        <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
-                           <span className="mdi mdi-hospital ic text-1 text-center"></span>
-                           <div className="card-body small p-3 osahan-card-body">
-                              <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">GINECOLOGIA</p>                              
+                        </a>
+                     </div>
+
+                     <div className="top-doctor-item">
+                        <a href="/especialista" className="link-dark">
+                           <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
+                              <span className="mdi mdi-hospital ic text-1 text-center"></span>
+                              <div className="card-body small p-3 osahan-card-body">
+                                 <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">GINECOLOGIA</p>
+                              </div>
                            </div>
-                        </div>
-                     </a>
-                  </div>
-                  <div className="top-doctor-item">
-                     <a href="/especialista" className="link-dark">
-                        <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
-                           <span className="mdi mdi-hospital ic text-1 text-center"></span>
-                           <div className="card-body small p-3 osahan-card-body">
-                              <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">CARDIOLOGISTA</p>                              
+                        </a>
+                     </div>
+
+                     <div className="top-doctor-item">
+                        <a href="/especialista" className="link-dark">
+                           <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
+                              <span className="mdi mdi-hospital ic text-1 text-center"></span>
+                              <div className="card-body small p-3 osahan-card-body">
+                                 <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">CARDIOLOGISTA</p>
+                              </div>
                            </div>
-                        </div>
-                     </a>
-                  </div>
-                  <div className="top-doctor-item">
-                     <a href="/especialista" className="link-dark">
-                        <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
-                           <span className="mdi mdi-hospital ic text-1 text-center"></span>
-                           <div className="card-body small p-3 osahan-card-body">
-                              <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">CLÍNICO GERAL</p>                              
+                        </a>
+                     </div>
+                     <div className="top-doctor-item">
+                        <a href="/especialista" className="link-dark">
+                           <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
+                              <span className="mdi mdi-hospital ic text-1 text-center"></span>
+                              <div className="card-body small p-3 osahan-card-body">
+                                 <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">CLÍNICO GERAL</p>
+                              </div>
                            </div>
-                        </div>
-                     </a>
-                  </div>             
-                  <div className="top-doctor-item">
-                     <a href="/especialista" className="link-dark">
-                        <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
-                           <span className="mdi mdi-hospital ic text-1 text-center"></span>
-                           <div className="card-body small p-3 osahan-card-body">
-                              <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">NUTRICIONISTA</p>                              
+                        </a>
+                     </div>             
+                     <div className="top-doctor-item">
+                        <a href="/especialista" className="link-dark">
+                           <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
+                              <span className="mdi mdi-hospital ic text-1 text-center"></span>
+                              <div className="card-body small p-3 osahan-card-body">
+                                 <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">NUTRICIONISTA</p>
+                              </div>
                            </div>
-                        </div>
-                     </a>
-                  </div>                                              
-               </div>
-               </div>
-               </Slider>           
-       
+                        </a>
+                     </div>
+               </Slider>
+            </div>
 
             <div className="cardHome">               
                <p className="mb-2 pb-1 fw-bold px-3 text-1">SELECIONE O ESPECIALISTA</p>
              </div>
-             <Slider {...settingsDoctor} className="top-doctor">
-            <div className="mb-3">             
-             <div className="top-doctors ps-2 ms-1">
+
+             <div className="mb-3">             
+               <div className="top-doctors ps-2 ms-1"></div>
+
+               <Slider {...settingsDoctor} className="top-doctor-especialista">
                   <div className="top-doctor-item">
                      <a href="#" className="link-dark">
                         <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
                            <img src={photo} alt="" className="img-fluid rounded-pill ft-age" />
                            <div className="card-body small p-3 osahan-card-body">
-                              <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">Dra. Regina</p>                              
+                              <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">Dra. Regina</p>
                            </div>
                         </div>
                      </a>
@@ -125,7 +127,7 @@ const  Agenda  = () => {
                         <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
                            <img src={photo} alt="" className="img-fluid rounded-pill ft-age" />
                            <div className="card-body small p-3 osahan-card-body">
-                              <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">Dra. Katia</p>                              
+                              <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">Dra. Katia</p>
                            </div>
                         </div>
                      </a>
@@ -135,7 +137,7 @@ const  Agenda  = () => {
                         <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
                         <img src={photo} alt="" className="img-fluid rounded-pill ft-age" />
                            <div className="card-body small p-3 osahan-card-body">
-                              <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">Dra. Leticia</p>                              
+                              <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">Dra. Leticia</p>
                            </div>
                         </div>
                      </a>
@@ -145,14 +147,15 @@ const  Agenda  = () => {
                         <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
                         <img src={photo} alt="" className="img-fluid rounded-pill ft-age" />
                            <div className="card-body small p-3 osahan-card-body">
-                              <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">Dra. Carla</p>                              
+                              <p className="card-title fw-semibold mb-0 text-truncate text-center s-14">Dra. Carla</p>
                            </div>
                         </div>
                      </a>
-                  </div>                                                                 
-               </div>             
+                  </div>
+               </Slider>
+
             </div>
-            </Slider>
+
             <button className="btn btn-outline-info" style={{ width: "95%", margin:"auto" }}><span className="mdi mdi-video-outline"> Somente on-line</span></button>
             <div className="space"></div>                              
             <div className="cardHome">
