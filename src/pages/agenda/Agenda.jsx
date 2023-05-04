@@ -130,45 +130,43 @@ const  Agenda  = () => {
                   <p className="fs-14 fw-bold text-black mb-3">Abril</p>
                   <div className="row align-items-center justify-content-between g-2 custom-check">
                    <div className="col">
-                       <input type="radio" className="btn-check" name="btnradio0" id="btnradio1" autocomplete="off" />
-                       <label className="btn btn-outline-info text-center"
-                          for="btnradio1">
+                       <input type="radio" className="btn-check" name="btnradio0" id="btnradio1"  />
+                       <label className="btn btn-outline-info text-center">
                        Dom<br/><span className="fs-5">10</span>
                        </label>
                     </div>
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio0" id="btnradio1" autocomplete="off"/>
-                        <label className="btn btn-outline-info text-center"
-                           for="btnradio1">
+                        <input type="radio" className="btn-check" name="btnradio0" id="btnradio1" />
+                        <label className="btn btn-outline-info text-center">
                         Seg<br/><span className="fs-5">11</span>
                         </label>
                      </div>
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio0" id="btnradio2" autocomplete="off"
-                           checked/>
+                        <input type="radio" className="btn-check" name="btnradio0" id="btnradio2" 
+                           />
                         <label className="btn btn-outline-info text-center"
-                           for="btnradio2">
+                           >
                         Ter<br/><span className="fs-5">12</span>
                         </label>
                      </div>
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio0" id="btnradio3" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio0" id="btnradio3" />
                         <label className="btn btn-outline-info text-center"
-                           for="btnradio3">
+                           >
                         Qua<br/><span className="fs-5">13</span>
                         </label>
                      </div>
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio0" id="btnradio4" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio0" id="btnradio4" />
                         <label className="btn btn-outline-info text-center"
-                           for="btnradio4">
+                           >
                         Qui<br/><span className="fs-5">14</span>
                         </label>
                      </div>
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio0" id="btnradio5" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio0" id="btnradio5" />
                         <label className="btn btn-outline-info text-center"
-                           for="btnradio5">
+                           >
                         Sex<br/><span className="fs-5">15</span>
                         </label>
                      </div>               
@@ -181,7 +179,7 @@ const  Agenda  = () => {
                   <h5 className="fs-14 fw-bold text-black mb-3">Horário manhã</h5>
                   <div className="row align-items-center justify-content-between g-2 custom-check">
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" />
                         <button className="btn btn-outline-info">                           
                            Dra. Regina<br/>
                            10:00
@@ -189,7 +187,7 @@ const  Agenda  = () => {
                         </button>                                                                             
                      </div>
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" />
                         <button className="btn btn-outline-info">                          
                            Dra. Regina<br/>
                            10:30
@@ -199,7 +197,7 @@ const  Agenda  = () => {
                   </div> 
                   <div className="row align-items-center justify-content-between g-2 custom-check" style="margin-top: 10px;">
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" />
                         <button className="btn btn-outline-info">                          
                            Dra. Regina<br/>
                            11:00
@@ -207,7 +205,7 @@ const  Agenda  = () => {
                         </button>                                                                             
                      </div>
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" />
                         <button className="btn btn-outline-info">                          
                            Dra. Regina<br/>
                            11:30
@@ -222,7 +220,7 @@ const  Agenda  = () => {
                   <h5 className="fs-14 fw-bold text-black mb-3">Horário tarde</h5>
                   <div className="row align-items-center justify-content-between g-2 custom-check" style="margin-top: 10px;">
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" />
                         <button className="btn btn-outline-info">
                            <img src={photo} alt="" className="img-fluid rounded-pill  ft-age1 "/>
                            Dra. Regina<br/>
@@ -231,7 +229,7 @@ const  Agenda  = () => {
                         </button>                                                                             
                      </div>
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" />
                         <button className="btn btn-outline-info">
                            <img src={photo} alt="" className="img-fluid rounded-pill  ft-age1 "/>
                            Dra. Regina<br/>
@@ -242,7 +240,7 @@ const  Agenda  = () => {
                   </div>
                   <div className="row align-items-center justify-content-between g-2 custom-check" style="margin-top: 10px;">
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" />
                         <button className="btn btn-outline-info">
                            <img src={photo} alt="" className="img-fluid rounded-pill  ft-age1 "/>
                            Dra. Regina<br/>
@@ -251,7 +249,7 @@ const  Agenda  = () => {
                         </button>                                                                             
                      </div>
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" />
                         <button className="btn btn-outline-info">
                            <img src="img/ft_perfil.png" alt="" className="img-fluid rounded-pill  ft-age1 "/>
                            Dra. Regina<br/>
@@ -262,7 +260,7 @@ const  Agenda  = () => {
                   </div>
                   <div className="row align-items-center justify-content-between g-2 custom-check" style="margin-top: 10px;">
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" />
                         <button className="btn btn-outline-info">
                            <img src={photo} alt="" className="img-fluid rounded-pill  ft-age1 "/>
                            Dra. Regina<br/>
@@ -271,7 +269,7 @@ const  Agenda  = () => {
                         </button>                                                                             
                      </div>
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" />
                         <button className="btn btn-outline-info">
                            <img src={photo} alt="" className="img-fluid rounded-pill  ft-age1 "/>
                            Dra. Regina<br/>
@@ -282,7 +280,7 @@ const  Agenda  = () => {
                   </div>
                   <div className="row align-items-center justify-content-between g-2 custom-check" style="margin-top: 10px;">
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" />
                         <button className="btn btn-outline-info">
                            <img src={photo} alt="" className="img-fluid rounded-pill  ft-age1 "/>
                            Dra. Regina<br/>
@@ -291,7 +289,7 @@ const  Agenda  = () => {
                         </button>                                                                             
                      </div>
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" />
                         <button className="btn btn-outline-info">
                            <img src={photo} alt="" className="img-fluid rounded-pill  ft-age1 "/>
                            Dra. Regina<br/>
@@ -302,7 +300,7 @@ const  Agenda  = () => {
                   </div>
                   <div className="row align-items-center justify-content-between g-2 custom-check" style="margin-top: 10px;">
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" />
                         <button className="btn btn-outline-info">
                            <img src={photo} alt="" className="img-fluid rounded-pill  ft-age1 "/>
                            Dra. Regina<br/>
@@ -311,7 +309,7 @@ const  Agenda  = () => {
                         </button>                                                                             
                      </div>
                      <div className="col">
-                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" autocomplete="off"/>
+                        <input type="radio" className="btn-check" name="btnradio1" id="btnradio8" />
                         <button className="btn btn-outline-info">
                            <img src={photo} alt="" className="img-fluid rounded-pill  ft-age1 "/>
                            Dra. Regina<br/>
