@@ -1,27 +1,56 @@
 import React, { useState, useEffect } from "react";
+import NavBar from "../../components/NavBar";
+import Slider from "react-slick"
 import photo from '../../assets/img/ft_perfil.png'
 
-const  Agenda  = () => {
-    return (        
-        <div className="request-appointment d-flex flex-column vh-100">
+
+const  Agenda  = () => { 
+  
+   var settings = {
+      infinite: false,
+      dots: false,
+      arrows: false,
+      speed: 300,
+      autoplay: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+   };
+   
+   var settingsDoctor = {
+    infinite: false,
+    dots: false,
+    arrows: false,
+    speed: 300,
+    autoplay: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+   };
+
+    return (          
+      
+<>
+<NavBar />
+<div className="request-appointment d-flex flex-column vh-100">         
          <div className="d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm osahan-header">
-            <a href="home.html" className="text-dark bg-white shadow rounded-circle icon">
+            <a href="/inicio" className="text-dark bg-white shadow rounded-circle icon">
                   <span className="mdi mdi-arrow-left mdi-18px"></span></a>
             <h6 className="mb-0 ms-3 me-auto fw-bold">Agende sua consulta</h6>
             <div className="d-flex align-items-center gap-3">
-               <a className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5" href="#"><i className="bi bi-list"></i></a>
+               <a id="toggle" className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5" href="#"><i className="bi bi-list"></i></a>
             </div>
          </div>        
-         <div className="appointment d-flex flex-column vh-100">
+         <div className="request-appointment d-flex flex-column vh-100">
             <div className="space"></div>
             <div className="cardHome">
                <h2 className="mb-2 pb-1 fw-bold px-3 text-1">CONSULTAS</h2> 
                <p className="mb-2 pb-1 fw-bold px-3 text-1">SELECIONE A ESPECIALIDADE</p>
-             </div>                        
-             <div className="mb-3">               
-               <div className="top-doctors ps-2 ms-1">
-                  <div className="top-doctor-item">
-                     <a href="especialista.html" className="link-dark">
+             </div>                                   
+                 
+             <Slider {...settingsDoctor} className="top-doctor-item">
+             <div className="mb-3"> 
+             <div className="top-doctors ps-2 ms-1">
+                  <div className="top-doctor-item" >
+                     <a href="/especialista" className="link-dark">
                         <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
                            <span className="mdi mdi-hospital text-1 text-center ic"></span>
                            <div className="card-body small p-3 osahan-card-body">
@@ -31,7 +60,7 @@ const  Agenda  = () => {
                      </a>
                   </div>
                   <div className="top-doctor-item">
-                     <a href="especialista.html" className="link-dark">
+                     <a href="/especialista" className="link-dark">
                         <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
                            <span className="mdi mdi-hospital ic text-1 text-center"></span>
                            <div className="card-body small p-3 osahan-card-body">
@@ -41,7 +70,7 @@ const  Agenda  = () => {
                      </a>
                   </div>
                   <div className="top-doctor-item">
-                     <a href="especialista.html" className="link-dark">
+                     <a href="/especialista" className="link-dark">
                         <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
                            <span className="mdi mdi-hospital ic text-1 text-center"></span>
                            <div className="card-body small p-3 osahan-card-body">
@@ -51,7 +80,7 @@ const  Agenda  = () => {
                      </a>
                   </div>
                   <div className="top-doctor-item">
-                     <a href="especialista.html" className="link-dark">
+                     <a href="/especialista" className="link-dark">
                         <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
                            <span className="mdi mdi-hospital ic text-1 text-center"></span>
                            <div className="card-body small p-3 osahan-card-body">
@@ -61,7 +90,7 @@ const  Agenda  = () => {
                      </a>
                   </div>             
                   <div className="top-doctor-item">
-                     <a href="especialista.html" className="link-dark">
+                     <a href="/especialista" className="link-dark">
                         <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
                            <span className="mdi mdi-hospital ic text-1 text-center"></span>
                            <div className="card-body small p-3 osahan-card-body">
@@ -71,13 +100,16 @@ const  Agenda  = () => {
                      </a>
                   </div>                                              
                </div>
-            </div>
+               </div>
+               </Slider>           
+       
 
             <div className="cardHome">               
                <p className="mb-2 pb-1 fw-bold px-3 text-1">SELECIONE O ESPECIALISTA</p>
              </div>
-            <div className="mb-3">               
-               <div className="top-doctors ps-2 ms-1">
+             <Slider {...settingsDoctor} className="top-doctor">
+            <div className="mb-3">             
+             <div className="top-doctors ps-2 ms-1">
                   <div className="top-doctor-item">
                      <a href="#" className="link-dark">
                         <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
@@ -118,9 +150,10 @@ const  Agenda  = () => {
                         </div>
                      </a>
                   </div>                                                                 
-               </div>
+               </div>             
             </div>
-            <button className="btn btn-outline-info" style="width: 95%; margin: auto;"><span className="mdi mdi-video-outline"> Somente on-line</span></button>
+            </Slider>
+            <button className="btn btn-outline-info" style={{ width: "95%", margin:"auto" }}><span className="mdi mdi-video-outline"> Somente on-line</span></button>
             <div className="space"></div>                              
             <div className="cardHome">
                <p className="mb-2 pb-1 fw-bold px-3 text-1">SELECIONE O MELHOR DIA PARA A CONSULTA</p>               
@@ -195,7 +228,7 @@ const  Agenda  = () => {
                         </button>
                      </div>                     
                   </div> 
-                  <div className="row align-items-center justify-content-between g-2 custom-check" style="margin-top: 10px;">
+                  <div className="row align-items-center justify-content-between g-2 custom-check" style={{ marginTop: "10px" }}>
                      <div className="col">
                         <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" />
                         <button className="btn btn-outline-info">                          
@@ -218,7 +251,7 @@ const  Agenda  = () => {
              
                <div className="mb-4">
                   <h5 className="fs-14 fw-bold text-black mb-3">Horário tarde</h5>
-                  <div className="row align-items-center justify-content-between g-2 custom-check" style="margin-top: 10px;">
+                  <div className="row align-items-center justify-content-between g-2 custom-check" style={{ marginTop: "10px" }}>
                      <div className="col">
                         <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" />
                         <button className="btn btn-outline-info">
@@ -238,7 +271,7 @@ const  Agenda  = () => {
                         </button>
                      </div>                     
                   </div>
-                  <div className="row align-items-center justify-content-between g-2 custom-check" style="margin-top: 10px;">
+                  <div className="row align-items-center justify-content-between g-2 custom-check" style={{ marginTop: "10px" }}>
                      <div className="col">
                         <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" />
                         <button className="btn btn-outline-info">
@@ -258,7 +291,7 @@ const  Agenda  = () => {
                         </button>
                      </div>                     
                   </div>
-                  <div className="row align-items-center justify-content-between g-2 custom-check" style="margin-top: 10px;">
+                  <div className="row align-items-center justify-content-between g-2 custom-check" style={{ marginTop: "10px" }}>
                      <div className="col">
                         <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" />
                         <button className="btn btn-outline-info">
@@ -278,7 +311,7 @@ const  Agenda  = () => {
                         </button>
                      </div>                     
                   </div>
-                  <div className="row align-items-center justify-content-between g-2 custom-check" style="margin-top: 10px;">
+                  <div className="row align-items-center justify-content-between g-2 custom-check" style={{ marginTop: "10px" }}>
                      <div className="col">
                         <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" />
                         <button className="btn btn-outline-info">
@@ -298,7 +331,7 @@ const  Agenda  = () => {
                         </button>
                      </div>                     
                   </div>
-                  <div className="row align-items-center justify-content-between g-2 custom-check" style="margin-top: 10px;">
+                  <div className="row align-items-center justify-content-between g-2 custom-check" style={{ marginTop: "10px" }}>
                      <div className="col">
                         <input type="radio" className="btn-check" name="btnradio1" id="btnradio7" />
                         <button className="btn btn-outline-info">
@@ -325,6 +358,8 @@ const  Agenda  = () => {
          </div>
       </div>
       </div>
+</>
+           
    
     )
 }

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick"
-import NavBar from "../../components/NavBar";
 import photo from "../../assets/img/perf1.jpeg";
 import photo1 from "../../assets/img/ft_perfil.png";
 import photo2 from "../../assets/img/home/prescription.png";
