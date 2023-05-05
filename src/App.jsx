@@ -48,7 +48,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './App.scss'
 import "./components/NavBar";
-
+import "./hc-offcanvas-nav"
 
 
 function App() {
