@@ -48,7 +48,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './App.scss'
 import "./components/NavBar";
-import "./hc-offcanvas-nav"
+
+
+
 
 
 function App() {
@@ -90,7 +92,7 @@ function App() {
     {path: '/review', exact: true, element: < Review/>},
     {path: '/sobre', exact: true, element: < Sobre/>},
     {path: '/video', exact: true, element: < Video/>},
-    {path: '/cadastrar-cartao', exact: true, element: < CadastrarCartao/>},
+    {path: '/cadastrar-cartao', exact: true, element: < CadastrarCartao/>}, 
 
   ]);
 

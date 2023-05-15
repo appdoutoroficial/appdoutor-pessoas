@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { useContext } from "react";
 // import logo from '../assets/images/logo-branco.png'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from "react-router-dom";
 import photo from '../assets/img/perf1.jpeg';
+import NavProvider from "../contexts/nav";
 
-const NavBar = () => {
-    const navigate = useNavigate();
+<NavProvider></NavProvider>
 
-    return (
-        <nav id="main-nav" className="hc-offcanvas-nav hc-nav-1 nav-levels-overlap nav-position-left disable-body">
+const NavBar = () => {   
+    const navigate = useNavigate();     
+    return (        
+         <nav id="main-nav" className="hc-offcanvas-nav hc-nav-1 nav-levels-overlap nav-position-left disable-body">
          <ul className="second-nav">
             <li className="osahan-user-profile bg-primary">
                <div className="d-flex align-items-center gap-2">
@@ -62,6 +65,7 @@ const NavBar = () => {
             </li>
          </ul>     
       </nav>
+        
     )
 }
 
