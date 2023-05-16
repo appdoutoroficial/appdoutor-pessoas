@@ -1,36 +1,16 @@
 import React, { useState, useEffect} from "react";
 import { useContext } from "react";
 import NavBar from "../../components/NavBar";
+import Menu from "../../components/Menu";
 
-import { NavContext } from "../../contexts/nav";
-
-
-
-const CadastrarCartao = () => {    
-   const { navbar } = useContext(NavContext);
+const CadastrarCartao = () => {
      return (
       <>  
-        
         <NavBar/>
 
-     
         <div className="request-appointment d-flex flex-column vh-100">
-          <div className="d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm osahan-header">
-            <a
-              href="/inicio"
-              className="text-dark bg-white shadow rounded-circle icon"
-            >
-              <span className="mdi mdi-arrow-left mdi-18px" />
-            </a>
-            <h6 className="mb-0 ms-3 me-auto fw-bold">Cadastre seu cartão</h6>
-            <div className="d-flex align-items-center gap-3">
-              <a href={navbar} className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5"
-                
-              >
-                <i className="bi bi-list" />
-              </a>
-            </div>
-          </div>
+          <Menu />
+          
           {/* body */}
           <div className="vh-100 my-auto overflow-auto p-3">
             <form>

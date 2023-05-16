@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRoutes, BrowserRouter as Router } from "react-router-dom";
 import Inicial from "./pages/inicial/Inicial";
 import Signin from "./pages/sign-in/Signin";
@@ -48,6 +48,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './App.scss'
 import "./components/NavBar";
+import AppContext from "./context/AppContext";
 
 
 
@@ -100,10 +101,24 @@ function App() {
 }
 
 const AppWrapper = () => {
+  const [menuObject, setMenuObject] = useState(false);
+
+  console.log(menuObject);
+
   return (
-    <Router>
-      <App />        
-    </Router>
+    <AppContext.Provider
+    // <Router
+      value={{
+        state: {
+          changeMenu: menuObject
+        },
+        setMenuObject: setMenuObject
+      }}
+    >
+      <Router>
+        <App />
+      </Router>
+    </AppContext.Provider>
   );
 };
 
