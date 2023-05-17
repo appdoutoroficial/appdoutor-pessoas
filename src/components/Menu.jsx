@@ -20,9 +20,12 @@ const NavBar = () => {
     console.log(value.state.changeMenu);
     var styles = {
         menuOpen: {
-            backgroundColor: value.state.changeMenu ? 'red' : ' #000'
+            backgroundColor: value.state.changeMenu ? 'red' : ' #000',            
+            
         }
-    }   
+        
+    }
+    
 
     return (
         <div style={styles.menuOpen} className="d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm osahan-header">
@@ -34,7 +37,7 @@ const NavBar = () => {
 
             <div className="d-flex align-items-center gap-3">
                 <a href="javascript:;" onClick={() => value.setMenuObject(!value.state.changeMenu)} className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5">
-                    <i className="bi bi-list" />
+                    <i className="bi bi-list" style={value.state.changeMenu ? {zIndex: 1000000} : {}} />
                 </a>
             </div>
         </div>

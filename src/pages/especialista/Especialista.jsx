@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
 import photo from "../../assets/img/ft_perfil.png"
+import NavBar from "../../components/NavBar";
+import AppContext from "../../context/AppContext";
+import { useContext } from "react";
 
 
 const Especialista = () => {
+   const value = useContext(AppContext)
     return (
-
+      <>
+      <NavBar />
         <div className="home d-flex flex-column vh-100">
         <div className="bg-white shadow-sm">
             <div className="d-flex align-items-center justify-content-between mb-auto p-3 osahan-header">
@@ -14,8 +19,9 @@ const Especialista = () => {
                   </a>
                </div>
                <div className="d-flex align-items-center gap-3">
-                  <a className="toggle text-muted d-flex align-items-center justify-content-center fs-5 bg-white shadow rounded-circle icon" href="#"><i
-                        className="bi bi-list"></i></a>
+               <a href="javascript:;" onClick={() => value.setMenuObject(!value.state.changeMenu)} className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5">
+                  <i className="bi bi-list"></i>
+               </a>
                </div>
             </div>
             <div className="px-3 pb-3">
@@ -134,6 +140,7 @@ const Especialista = () => {
              </div>
           </div>
        </div>
+       </>
 
     )    
 }

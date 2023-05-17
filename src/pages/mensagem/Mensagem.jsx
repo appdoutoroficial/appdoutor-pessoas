@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
+import NavBar from "../../components/NavBar";
+import AppContext from "../../context/AppContext";
+import { useContext } from "react";
 import photo from "../../assets/img/ft_perfil.png";
 import photo2 from "../../assets/img/review/profile-1.jpg"
 
 const Mensagem = () => {
- 
+  const value = useContext(AppContext);
     return(
         <>
+        <NavBar />
   <div className="message d-flex flex-column vh-100">
     {/* navbar */}
     <div className="bg-white shadow-sm mb-2">
@@ -17,15 +21,12 @@ const Mensagem = () => {
           >
             <span className="mdi mdi-arrow-left mdi-18px" />
           </a>
-          <h6 className="mb-0 ms-3 me-auto fw-bold">Mensagens</h6>
+          <h6 className="mb-0 ms-6 me-auto fw-bold ">Mensagens</h6>
         </div>
         <div className="d-flex align-items-center gap-2">
-          <a
-            className="toggle text-dark d-flex align-items-center justify-content-center fs-5 bg-white shadow rounded-circle icon"
-            href="#"
-          >
-            <i className="bi bi-list" />
-          </a>
+        <a href="javascript:;" onClick={() => value.setMenuObject(!value.state.changeMenu)} className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5">
+      <i className="bi bi-list"></i>
+    </a>
         </div>
       </div>
       <div className="px-3 pb-3">
@@ -40,7 +41,7 @@ const Mensagem = () => {
             <input
               type="text"
               className="form-control bg-transparent text-muted border-0 px-3 fs-14"
-              placeholder="Search Chat"
+              placeholder="Procurar conversas"
               aria-label="Search"
               aria-describedby="search"
             />

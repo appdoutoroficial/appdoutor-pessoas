@@ -1,9 +1,47 @@
 import React, { useState, useEffect } from "react";
-import photo from "../../assets/img/ft_perfil.png"
+import Slider from "react-slick"
+import photo1 from "../../assets/img/ft_perfil.png"
+import NavBar from "../../components/NavBar";
+import AppContext from "../../context/AppContext";
+import { useContext } from "react";
 
 
 const Pesquisar = () => {
+  const value = useContext(AppContext);
+
+  var settings = {
+    infinite: false,
+    dots: false,
+    arrows: false,
+    speed: 300,
+    autoplay: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+ };
+ 
+ var settingsDoctor = {
+  infinite: false,
+  dots: false,
+  arrows: false,
+  speed: 300,
+  autoplay: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+ };
+
+ var availableDoctor = {
+   infinite: false,
+ dots: false,
+ arrows: false,
+ speed: 300,
+ autoplay: false,
+ slidesToShow: 1,
+ slidesToScroll: 1,
+ }
+
     return (
+   <>
+   <NavBar />
         <div className="home d-flex flex-column vh-100">
   <div className="bg-white shadow-sm">
     <div className="d-flex align-items-center justify-content-between mb-auto p-3 osahan-header">
@@ -16,12 +54,9 @@ const Pesquisar = () => {
         </a>
       </div>
       <div className="d-flex align-items-center gap-3">
-        <a
-          className="toggle text-muted d-flex align-items-center justify-content-center fs-5 bg-white shadow rounded-circle icon"
-          href="#"
-        >
-          <i className="bi bi-list" />
-        </a>
+      <a href="javascript:;" onClick={() => value.setMenuObject(!value.state.changeMenu)} className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5">
+        <i className="bi bi-list"></i>
+      </a>
       </div>
     </div>
     <div className="px-3 pb-3">
@@ -51,114 +86,62 @@ const Pesquisar = () => {
       <div>
         <h6 className="mb-2 pb-1 px-3 fw-bold text-1">Especialistas</h6>
       </div>
-      <div className="mb-3">
-        <div className="top-doctors ps-2 ms-1">
-          <div className="top-doctor-item">
-            <a href="#" className="link-dark">
-              <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
-                <img
-                  src={photo}
-                  className="card-img-top top-doctor-img"
-                  alt="..."
-                />
-                <div className="card-body small p-3 osahan-card-body">
-                  <p className="card-title fw-semibold mb-0 text-truncate fs-14">
-                    Dra. Regina Biasoli
-                  </p>
-                  <p className="card-text text-muted small m-0">
-                    Especialista em trombofilia
-                  </p>
-                </div>
+      <Slider {...settingsDoctor} className="top-doctors">
+              <div className="top-doctor-item" style={{ width: 349 }}>
+                <a href="/sobre" className="link-dark">
+                  <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden" style={{ width: "95%", margin: "auto" }}                  >
+                    <img src={photo1} className="card-img-top top-doctor-img" alt="..."/>
+                    <div className="card-body small p-3 osahan-card-body">
+                      <p className="card-title fw-semibold mb-0 text-truncate fs-14">
+                        Dra. Regina Biasoli
+                      </p>
+                      <p className="card-text text-muted small m-0">
+                        Especialista em trombofilia
+                      </p>
+                    </div>
+                  </div>
+                </a>
               </div>
-            </a>
-          </div>
-          <div className="top-doctor-item">
-            <a href="#" className="link-dark">
-              <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
-                <img
-                  src={photo}
-                  className="card-img-top top-doctor-img"
-                  alt="..."
-                />
-                <div className="card-body small p-3 osahan-card-body">
-                  <p className="card-title fw-semibold mb-0 text-truncate fs-14">
-                    Dra. Regina Biasoli
-                  </p>
-                  <p className="card-text text-muted small m-0">
-                    Especialista em trombofilia
-                  </p>
-                </div>
+              <div className="top-doctor-item" style={{ width: 349 }}>
+                <a href="/sobre" className="link-dark">
+                  <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden" style={{ width: "95%", margin: "auto" }}                  >
+                    <img src={photo1} className="card-img-top top-doctor-img" alt="..."/>
+                    <div className="card-body small p-3 osahan-card-body">
+                      <p className="card-title fw-semibold mb-0 text-truncate fs-14">
+                        Dra. Regina Biasoli
+                      </p>
+                      <p className="card-text text-muted small m-0">
+                        Especialista em trombofilia
+                      </p>
+                    </div>
+                  </div>
+                </a>
               </div>
-            </a>
-          </div>
-          <div className="top-doctor-item">
-            <a href="#" className="link-dark">
-              <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
-                <img
-                  src={photo}
-                  className="card-img-top top-doctor-img"
-                  alt="..."
-                />
-                <div className="card-body small p-3 osahan-card-body">
-                  <p className="card-title fw-semibold mb-0 text-truncate fs-14">
-                    Dra. Regina Biasoli
-                  </p>
-                  <p className="card-text text-muted small m-0">
-                    Especialista em trombofilia
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div className="top-doctor-item">
-            <a href="#" className="link-dark">
-              <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
-                <img
-                  src={photo}
-                  className="card-img-top top-doctor-img"
-                  alt="..."
-                />
-                <div className="card-body small p-3 osahan-card-body">
-                  <p className="card-title fw-semibold mb-0 text-truncate fs-14">
-                    Dra. Regina Biasoli
-                  </p>
-                  <p className="card-text text-muted small m-0">
-                    Especialista em trombofilia
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div className="top-doctor-item">
-            <a href="#" className="link-dark">
-              <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden">
-                <img
-                  src={photo}
-                  className="card-img-top top-doctor-img"
-                  alt="..."
-                />
-                <div className="card-body small p-3 osahan-card-body">
-                  <p className="card-title fw-semibold mb-0 text-truncate fs-14">
-                    Dra. Regina Biasoli
-                  </p>
-                  <p className="card-text text-muted small m-0">
-                    Especialista em trombofilia
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+              <div className="top-doctor-item" style={{ width: 349 }}>
+                <a href="/sobre" className="link-dark">
+                  <div className="card bg-white border-0 rounded-4 shadow-sm overflow-hidden" style={{ width: "95%", margin: "auto" }}                  >
+                    <img src={photo1} className="card-img-top top-doctor-img" alt="..."/>
+                    <div className="card-body small p-3 osahan-card-body">
+                      <p className="card-title fw-semibold mb-0 text-truncate fs-14">
+                        Dra. Regina Biasoli
+                      </p>
+                      <p className="card-text text-muted small m-0">
+                        Especialista em trombofilia
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>                
+              </Slider>
+           </div>
     {/* Available doctors */}
     <div className="mb-3">
       <h6 className="mb-2 pb-1 fw-bold px-3 text-1">
         Promoções / Noticias a definir
       </h6>
-      <div className="available-doctor ps-2 ms-1">
+      <Slider {...availableDoctor} className="available-doctor ps-2 ms-1">
         <div className="available-doctor-item">
-          <div className="bg-primary text-white rounded-4 p-3 doctor-book-back">
+          <div className="bg-primary text-white rounded-4 p-3 doctor-book-back" style={{ width: 349 }}>
             <h1 className="mb-1 doctor-book-back-title">
               Texto 1<br />
               <span className="h4 text-warning overflow-hidden rounded-4 m-0">
@@ -175,7 +158,7 @@ const Pesquisar = () => {
           </div>
         </div>
         <div className="available-doctor-item">
-          <div className="bg-primary text-white rounded-4 p-3 doctor-book-back">
+          <div className="bg-primary text-white rounded-4 p-3 doctor-book-back" style={{ width: 349 }}>
             <h1 className="mb-1 doctor-book-back-title">
               Texto 1<br />
               <span className="h4 text-warning overflow-hidden rounded-4 m-0">
@@ -192,7 +175,7 @@ const Pesquisar = () => {
           </div>
         </div>
         <div className="available-doctor-item">
-          <div className="bg-primary text-white rounded-4 p-3 doctor-book-back">
+          <div className="bg-primary text-white rounded-4 p-3 doctor-book-back" style={{ width: 349 }}>
             <h1 className="mb-1 doctor-book-back-title">
               Texto 1<br />
               <span className="h4 text-warning overflow-hidden rounded-4 m-0">
@@ -208,7 +191,8 @@ const Pesquisar = () => {
             </a>
           </div>
         </div>
-      </div>
+
+      </Slider>
     </div>
   </div>
   <div className="space" />
@@ -238,6 +222,7 @@ const Pesquisar = () => {
     </div>
   </div>
 </div>
+</>
 
     )
 }

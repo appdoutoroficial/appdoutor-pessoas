@@ -30,7 +30,7 @@ import FinalizaCall from "./pages/finaliza-call/FinalizaCall";
 import Mapa from "./pages/mapa/Mapa"
 import Mensagem from "./pages/mensagem/Mensagem";
 import IniciarConsulta from "./pages/iniciar-consulta/IniciarConsulta";
-import Notificacao from "./pages/noticacao/Noticacao";
+import Notificacao from "./pages/notificacao/Notificacao";
 import Pagamento from "./pages/pagamento/Pagamento";
 import Pesquisar from "./pages/pesquisar/Pesquisar";
 import Receita from "./pages/receita/Receita";

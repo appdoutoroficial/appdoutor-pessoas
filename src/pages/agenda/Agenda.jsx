@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import NavBar from "../../components/NavBar";
 import Slider from "react-slick"
 import photo from '../../assets/img/ft_perfil.png'
+import AppContext from "../../context/AppContext";
+import { useContext } from "react";
 
-
-const  Agenda  = () => { 
-  
+const  Agenda  = () => {    
+   const value = useContext(AppContext);
+   
    var settings = {
       infinite: false,
       dots: false,
@@ -36,9 +38,9 @@ const  Agenda  = () => {
                   <span className="mdi mdi-arrow-left mdi-18px"></span></a>
             <h6 className="mb-0 ms-3 me-auto fw-bold">Agende sua consulta</h6>
             <div className="d-flex align-items-center gap-3">
-               <div  className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5">
-                  <i className="bi bi-list"></i>
-               </div>
+            <a href="javascript:;" onClick={() => value.setMenuObject(!value.state.changeMenu)} className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5">
+              <i className="bi bi-list"></i>
+            </a>
             </div>
          </div>        
          <div className="request-appointment d-flex flex-column vh-100">

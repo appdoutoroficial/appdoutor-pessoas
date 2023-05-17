@@ -1,16 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import photo from '../../assets/img/ft_perfil.png';
+import NavBar from '../../components/NavBar';
+import AppContext from "../../context/AppContext";
+import { useContext } from "react";
 
 
 const Call = () => {
+   const value = useContext(AppContext);
+   
     return (
         <>
+        <NavBar />
         <div className="call">
         <div className="d-flex align-items-center justify-content-between p-3 position-absolute w-100">
            <a href="/chat" className="link-dark shadow bg-white rounded-circle icon">
               <span className="mdi mdi-arrow-left mdi-18px"></span>
            </a>
-           <a className="toggle d-flex hc-nav-trigger shadow hc-nav-1 link-dark bg-white rounded-circle icon" href="#" role="button" aria-controls="hc-nav-1"><i className="bi bi-list fs-3 d-flex"></i></a>
+           <div className="d-flex align-items-center gap-3">
+            <a href="javascript:;" onClick={() => value.setMenuObject(!value.state.changeMenu)} className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5">
+              <i className="bi bi-list"></i>
+            </a>
+            </div>
         </div>
         <div className="bg-light d-flex align-items-center justify-content-center call-display">
            <div className="text-center">

@@ -6,8 +6,13 @@ import photo2 from "../../assets/img/home/prescription.png";
 import photo3 from "../../assets/img/home/medicine.png";
 import photo4 from "../../assets/img/home/schedule.png";
 import photo5 from "../../assets/img/ftmao.png";
+import NavBar from "../../components/NavBar";
+import AppContext from "../../context/AppContext";
+import { useContext } from "react";
 
 const Inicio = () => {
+
+  const value = useContext(AppContext);
 
   var settings = {
     infinite: false,
@@ -28,10 +33,11 @@ const Inicio = () => {
   slidesToShow: 1,
   slidesToScroll: 1,
  };
- 
+
     return (
       
       <>
+        <NavBar/>
       <div className="home d-flex flex-column vh-100">
         <div className="bg-white shadow-sm">
           <div className="d-flex align-items-center justify-content-between mb-auto p-3 osahan-header">
@@ -56,15 +62,12 @@ const Inicio = () => {
                 <span className="mdi mdi-cards-heart-outline mdi-18px text-primary" />
               </a>
               <a
-                href="#"
+                href="/notificacao"
                 className="bg-white shadow rounded-circle icon"
               >
                 <span className="mdi mdi-bell-outline mdi-18px text-primary" />
               </a>
-              <a
-                className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center"
-                href="#"
-              >
+              <a href="javascript:;" onClick={() => value.setMenuObject(!value.state.changeMenu)} className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5">
                 <i className="bi bi-list text-primary fs-5 d-flex" />
               </a>
             </div>

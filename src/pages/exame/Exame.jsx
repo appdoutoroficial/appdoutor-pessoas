@@ -1,17 +1,24 @@
 import React, { useState, useEffect } from "react";
+import NavBar from "../../components/NavBar";
+import AppContext from "../../context/AppContext";
+import { useContext } from "react";
 
 
 
 const  Exame  = () => {
+   const value = useContext(AppContext);
     return (
-        
+        <>
+        <NavBar />
         <div class="request-appointment d-flex flex-column vh-100">
          <div class="d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm osahan-header">
             <a href="/inicio" class="text-dark bg-white shadow rounded-circle icon">
                   <span class="mdi mdi-arrow-left mdi-18px"></span></a>
             <h6 class="mb-0 ms-3 me-auto fw-bold">Meus exames</h6>
             <div class="d-flex align-items-center gap-3">
-               <a class="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5" href="#"><i class="bi bi-list"></i></a>
+            <a href="javascript:;" onClick={() => value.setMenuObject(!value.state.changeMenu)} className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5">
+              <i className="bi bi-list"></i>
+            </a>
             </div>
          </div>
          <div class="vh-100 my-auto overflow-auto body-fix-osahan-footer">
@@ -69,7 +76,7 @@ const  Exame  = () => {
             <a href="/inicio" class="btn btn-info btn-lg w-100 rounded-4">Salvar</a>
          </div> 
       </div>
-   
+      </>   
     )
 }
 

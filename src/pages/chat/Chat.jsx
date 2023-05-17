@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
 import photo from "../../assets/img/ft_perfil.png";
 import photo1 from "../../assets/img/perf1.jpeg";
+import AppContext from "../../context/AppContext";
+import { useContext } from "react";
+import NavBar from "../../components/NavBar";
 
 const Chat = () => {
+  const value = useContext(AppContext);
+
     return (
         <>
+        <NavBar />
         <div className="chat d-flex flex-column vh-100">
           {/* navbar */}
           <div className="d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm osahan-header">
@@ -34,12 +40,9 @@ const Chat = () => {
               <a href="/call" className="bg-white shadow rounded-circle icon">
                 <span className="mdi mdi-video-outline mdi-18px" />
               </a>
-              <a
-                className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5"
-                href="#"
-              >
-                <i className="bi bi-list" />
-              </a>
+           <a href="javascript:;" onClick={() => value.setMenuObject(!value.state.changeMenu)} className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5">
+              <i className="bi bi-list"></i>
+            </a>
             </div>
           </div>
           {/* body */}

@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick"
-import photo from "../../assets/img/ft_perfil.png"
 import NavBar from "../../components/NavBar";
+import AppContext from "../../context/AppContext";
+import { useContext } from "react";
+import photo from "../../assets/img/ft_perfil.png"
+
 
 
 const Video = () => {
+  const value = useContext(AppContext);
 
   var settings = {
     dots: false,
@@ -21,26 +25,34 @@ const Video = () => {
   arrows: false,
   speed: 300,
   autoplay: false,
-  slidesToShow: 2.1,
+  slidesToShow: 1,
   slidesToScroll: 1,    
  };
 
     return (   
+        <>
+        <NavBar />
         <div className="video d-flex flex-column vh-100">
   {/* navbar */} 
-  <div className="bg-white d-flex align-items-center justify-content-between shadow-sm mb-auto p-3">
+ 
+  <div className="d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm osahan-header">
+    <a
+      href="/inicio"
+      className="text-dark bg-white shadow rounded-circle icon"
+    >
+      <span className="mdi mdi-arrow-left mdi-18px" />
+    </a>
     <h5 className="m-0">
       Telemedicina
-      <span className="badge bg-success ms-2 rounded-1 fw-normal">
+      <span className="badge bg-success ms-2 rounded-1 fw-normal" style={{width: 95}}>
         Disponível
       </span>
     </h5>
-    <a
-      className="toggle text-dark d-flex align-items-center justify-content-center bg-white shadow rounded-circle icon"
-      href="#"
-    >
-      <i className="bi bi-list fs-5" />
+    <div className="d-flex align-items-center gap-3">
+    <a href="javascript:;" onClick={() => value.setMenuObject(!value.state.changeMenu)} className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5">
+       <i className="bi bi-list"></i>
     </a>
+    </div>
   </div>
   {/* body */}
   <div className="vh-100 my-auto overflow-auto body-fix-osahan-footer">
@@ -293,7 +305,7 @@ const Video = () => {
     </div>
   </div>
 </div>
-
+</>
 
 
     )

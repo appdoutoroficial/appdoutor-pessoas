@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
+import NavBar from "../../components/NavBar";
+import AppContext from "../../context/AppContext";
+import { useContext } from "react";
 import photo from "../../assets/img/icon4.png"
 import photo2 from "../../assets/img/ftmao.png"
 import photo3 from "../../assets/img/Hemocromatose-1.png"
 
 
 const Sobre = () => {
+  const value = useContext(AppContext);
     return (
+       <>
+       <NavBar />
         <div className="request-appointment d-flex flex-column vh-100">
   <div className="d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm osahan-header">
     <a
@@ -16,12 +22,9 @@ const Sobre = () => {
     </a>
     <h6 className="mb-0 ms-3 me-auto fw-bold">Sobre</h6>
     <div className="d-flex align-items-center gap-3">
-      <a
-        className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5"
-        href="#"
-      >
-        <i className="bi bi-list" />
-      </a>
+    <a href="javascript:;" onClick={() => value.setMenuObject(!value.state.changeMenu)} className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5">
+       <i className="bi bi-list"></i>
+    </a>
     </div>
   </div>
   {/* body */}
@@ -166,6 +169,7 @@ const Sobre = () => {
     </div>
   </div>
 </div>
+       </>
 
     )
 }

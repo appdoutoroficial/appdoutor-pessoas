@@ -7,15 +7,18 @@ import { useNavigate } from "react-router-dom";
 import photo from '../assets/img/perf1.jpeg';
 import AppContext from "../context/AppContext";
 
+
 const NavBar = () => {
    const value = useContext(AppContext);
 
    console.log(value);
 
    // Aqui fazer a verificação e adicionar a classe, quando clicar passa o elemento atualizando para a raiz e boas. Colocar no nav ou onde precisa.
+   
+
 
    return (
-         <nav id="main-nav" className="hc-offcanvas-nav hc-nav-1 nav-levels-overlap nav-position-left disable-body">
+      <nav id="main-nav" className={`hc-offcanvas-nav hc-nav-1 nav-levels-overlap nav-position-left disable-body  ${value.state.changeMenu ? 'nav-open' : 'hidden' }`} style={value.state.changeMenu ? {visibility:'visible', display: 'block', } : {}}  >
             <ul className="second-nav">
                <li className="osahan-user-profile bg-primary">
                   <div className="d-flex align-items-center gap-2">
@@ -26,15 +29,15 @@ const NavBar = () => {
                      </div>
                   </div>
                </li>           
-               <li><a href="notification.html"><span className="mdi mdi-bell-outline me-3"></span>Notificações</a></li>
-               <li><a href="home.html"><span className="mdi mdi-home-variant-outline me-3"></span>Home</a></li>
-               <li><a href="mapa.html"><span className="mdi mdi-car me-3"></span>Rota</a></li>                              
-               <li><a href="pagamento.html"><span className="mdi mdi-file-table-box-outline me-3"></span>Pagamento</a></li>         
+               <li><a href="#"><span className="mdi mdi-bell-outline me-3"></span>Notificações</a></li>
+               <li><a href="/inicio"><span className="mdi mdi-home-variant-outline me-3"></span>Home</a></li>
+               <li><a href="/mapa"><span className="mdi mdi-car me-3"></span>Rota</a></li>                              
+               <li><a href="/pagamento"><span className="mdi mdi-file-table-box-outline me-3"></span>Pagamento</a></li>         
                <li>
                   <a href="#"><span className="mdi mdi-account-outline me-3"></span>Opções</a>
                   <ul>
-                     <li><a href="my-profile.html"><span className="mdi mdi-account-outline me-3"></span>Minha conta</a></li>
-                     <li><a href="my-appointment-upcoming.html"><span className="mdi mdi-calendar-clock me-3"></span>Próximas consultas</a></li>
+                     <li><a href="/perfil"><span className="mdi mdi-account-outline me-3"></span>Minha conta</a></li>
+                     <li><a href="/iniciar-consulta"><span className="mdi mdi-calendar-clock me-3"></span>Próximas consultas</a></li>
                      <li><a href="my-appointment.html"><span className="mdi mdi-calendar-range me-3"></span>Minhas consultas</a></li>
                      <li><a href="history.html"><span className="mdi mdi-history me-3"></span>Histórico</a></li>
                      <li><a href="favorite-doctor.html"><span className="mdi mdi-cards-heart-outline me-3"></span>Favoritos</a></li>
