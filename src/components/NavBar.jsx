@@ -6,8 +6,10 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import photo from "../assets/img/perf1.jpeg";
 import AppContext from "../context/AppContext";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
+  const navigate = useNavigate();
   const value = useContext(AppContext);
 
   console.log(value);
@@ -37,62 +39,62 @@ const NavBar = () => {
           </div>
         </li>
         <li>
-          <a href="#">
+          <a onClick={() => navigate("")}>
             <span className="mdi mdi-bell-outline me-3"></span>Notificações
           </a>
         </li>
         <li>
-          <a href="/inicio">
+          <a onClick={() => navigate("/inicio")}>
             <span className="mdi mdi-home-variant-outline me-3"></span>Home
           </a>
         </li>
         <li>
-          <a href="/mapa">
+          <a onClick={() => navigate("/mapa")}>
             <span className="mdi mdi-car me-3"></span>Rota
           </a>
         </li>
         <li>
-          <a href="/pagamento">
+          <a onClick={() => navigate("/pagamento")}>
             <span className="mdi mdi-file-table-box-outline me-3"></span>
             Pagamento
           </a>
         </li>
         <li>
-          <a href="#">
+          <a onClick={() => navigate("")}>
             <span className="mdi mdi-account-outline me-3"></span>Opções
           </a>
           <ul>
             <li>
-              <a href="/perfil">
+              <a onClick={() => navigate("/perfil")}>
                 <span className="mdi mdi-account-outline me-3"></span>Minha
                 conta
               </a>
             </li>
             <li>
-              <a href="/iniciar-consulta">
+              <a onClick={() => navigate("/iniciar-consulta")}>
                 <span className="mdi mdi-calendar-clock me-3"></span>Próximas
                 consultas
               </a>
             </li>
             <li>
-              <a href="my-appointment.html">
+              <a onClick={() => navigate("/minha-consulta")}>
                 <span className="mdi mdi-calendar-range me-3"></span>Minhas
                 consultas
               </a>
             </li>
             <li>
-              <a href="history.html">
+              <a onClick={() => navigate("")}>
                 <span className="mdi mdi-history me-3"></span>Histórico
               </a>
             </li>
             <li>
-              <a href="favorite-doctor.html">
+              <a onClick={() => navigate("")}>
                 <span className="mdi mdi-cards-heart-outline me-3"></span>
                 Favoritos
               </a>
             </li>
             <li>
-              <a href="change-profile.html">
+              <a onClick={() => navigate("/change-profile")}>
                 <span className="mdi mdi-square-edit-outline me-3"></span>Editar
                 conta
               </a>
@@ -100,35 +102,34 @@ const NavBar = () => {
           </ul>
         </li>
         <li>
-          <a href="video.html">
+          <a onClick={() => navigate("/video")}>
             <span className="mdi mdi-video-outline me-3"></span>Telemedicina
           </a>
         </li>
         <li>
-          <a href="chat.html">
+          <a onClick={() => navigate("/chat")}>
             <span className="mdi mdi-chat-processing-outline me-3"></span>Chat
           </a>
         </li>
         <li>
-          <a href="review.html">
+          <a onClick={() => navigate("/review")}>
             <span className="mdi mdi-star-half-full me-3"></span>Avaliar
             especialista
           </a>
         </li>
         <li>
-          <a href="index.html">
+          <a onClick={() => navigate("/inicial")}>
             <span className="mdi mdi-login me-3"></span>Sair
-          </a>
-        </li>
-        <li>
-          <a href="inicial.html">
-            <span className="mdi mdi-login me-3"></span>Tela carregar
           </a>
         </li>
       </ul>
       <ul className="bottom-nav">
         <li className="home">
-          <a href="https://www.facebook.com/drareginabiasoli/">
+          <a
+            onClick={() =>
+              navigate("https://www.facebook.com/drareginabiasoli/")
+            }
+          >
             <p className="h5 m-0">
               <span className="mdi mdi-facebook"></span>
             </p>
@@ -136,7 +137,11 @@ const NavBar = () => {
           </a>
         </li>
         <li className="find">
-          <a href="https://www.instagram.com/drareginabiasoli/">
+          <a
+            onClick={() =>
+              navigate("https://www.instagram.com/drareginabiasoli/")
+            }
+          >
             <p className="h5 m-0">
               <span className="mdi mdi-instagram"></span>
             </p>
@@ -144,7 +149,7 @@ const NavBar = () => {
           </a>
         </li>
         <li className="more">
-          <a href="https://drareginabiasoli.com.br/">
+          <a onClick={() => navigate("https://drareginabiasoli.com.br/")}>
             <p className="h5 m-0">
               <span className="mdi mdi-web"></span>
             </p>
