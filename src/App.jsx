@@ -10,7 +10,7 @@ import Profile from "./pages/profile/Profile";
 import Selfie from "./pages/selfie/Selfie";
 import RecuperaSenha from "./pages/recuperaSenha/RecuperaSenha";
 import NovaSenha from "./pages/nova-senha/NovaSenha";
-import Gmail from "./pages/entrarGmail/EntrarGmail";
+import Gmail from "./pages/entrar-gmail/EntrarGmail";
 import Congrats from "./pages/congrats/Congrats";
 import IndexInterno from "./pages/interna/inicial/Inicial";
 import Home from "./pages/inicio/Inicio";

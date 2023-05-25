@@ -1,47 +1,55 @@
 import React, { useState, useEffect } from "react";
 import { useContext } from "react";
-// import logo from '../assets/images/logo-branco.png'; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+// import logo from '../assets/images/logo-branco.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-import photo from '../assets/img/perf1.jpeg';
+import photo from "../assets/img/perf1.jpeg";
 import AppContext from "../context/AppContext";
 
-
-
 const NavBar = () => {
-    const value = useContext(AppContext);
+  const value = useContext(AppContext);
 
-    // value está a variável que tem a verificação se é para abrir ou não = (changeMenu)
-    const navigate = useNavigate();
-   
-    // Aqui fazer a verificação e adicionar a classe, quando clicar passa o elemento atualizando para a raiz e boas. Colocar no nav ou onde precisa.
+  // value está a variável que tem a verificação se é para abrir ou não = (changeMenu)
+  const navigate = useNavigate();
 
-    console.log(value.state.changeMenu);
-    var styles = {
-        menuOpen: {
-            backgroundColor: value.state.changeMenu ? 'red' : ' #000',            
-            
-        }
-        
-    }
-    
+  // Aqui fazer a verificação e adicionar a classe, quando clicar passa o elemento atualizando para a raiz e boas. Colocar no nav ou onde precisa.
 
-    return (
-        <div style={styles.menuOpen} className="d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm osahan-header">
-            <a href="/inicio" className="text-dark bg-white shadow rounded-circle icon" >
-                <span className="mdi mdi-arrow-left mdi-18px" />
-            </a>
+  console.log(value.state.changeMenu);
+  var styles = {
+    menuOpen: {
+      backgroundColor: value.state.changeMenu ? "red" : " #000",
+    },
+  };
 
-            <h6 className="mb-0 ms-3 me-auto fw-bold">Cadastre seu cartão</h6>
+  return (
+    <div
+      style={styles.menuOpen}
+      className="d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm osahan-header"
+    >
+      <a
+        onClick={() => navigate("/inicio")}
+        className="text-dark bg-white shadow rounded-circle icon"
+      >
+        <span className="mdi mdi-arrow-left mdi-18px" />
+      </a>
 
-            <div className="d-flex align-items-center gap-3">
-                <a href="javascript:;" onClick={() => value.setMenuObject(!value.state.changeMenu)} className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5">
-                    <i className="bi bi-list" style={value.state.changeMenu ? {zIndex: 1000000} : {}} />
-                </a>
-            </div>
-        </div>
-    )
-}
+      <h6 className="mb-0 txt-center me-auto fw-bold">Cadastre seu cartão</h6>
+
+      <div className="d-flex align-items-center gap-3">
+        <a
+          href="javascript:;"
+          onClick={() => value.setMenuObject(!value.state.changeMenu)}
+          className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5"
+        >
+          <i
+            className="mdi mdi-menu"
+            style={value.state.changeMenu ? { zIndex: 1000000 } : {}}
+          />
+        </a>
+      </div>
+    </div>
+  );
+};
 
 export default NavBar;
