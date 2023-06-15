@@ -120,7 +120,10 @@ const Receita = () => {
             <span className="mdi mdi-video-outline mdi-24px" />
             <span>Telemedicina</span>
           </a>
-          <a href="/chat" className="col footer-bottom-nav">
+          <a
+            onClick={() => navigate("/chat")}
+            className="col footer-bottom-nav"
+          >
             <span className="mdi mdi-message-processing-outline mdi-24px" />
             <span>Chat</span>
           </a>

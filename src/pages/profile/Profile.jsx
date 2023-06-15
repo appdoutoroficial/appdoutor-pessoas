@@ -255,7 +255,7 @@ const Profile = (props) => {
         </div>
         <div>
           <a
-            onClick={() => navigate("/selfie")}
+            onClick={() => navigate("/cadastrar-pagamento")}
             className="btn btn-info btn-lg w-100 rounded-4 mb-3"
           >
             Continuar

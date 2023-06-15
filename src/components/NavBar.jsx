@@ -6,7 +6,7 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import photo from "../assets/img/perf1.jpeg";
 import AppContext from "../context/AppContext";
-import { useNavigate } from "react-router-dom";
+
 
 const NavBar = () => {
   const navigate = useNavigate();

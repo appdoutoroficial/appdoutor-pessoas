@@ -12,7 +12,6 @@ import RecuperaSenha from "./pages/recuperaSenha/RecuperaSenha";
 import NovaSenha from "./pages/nova-senha/NovaSenha";
 import Gmail from "./pages/entrar-gmail/EntrarGmail";
 import Congrats from "./pages/congrats/Congrats";
-import IndexInterno from "./pages/interna/inicial/Inicial";
 import Home from "./pages/inicio/Inicio";
 import Perfil from "./pages/perfil/Perfil";
 import EditaPerfil from "./pages/change-profile/changeProfile";
@@ -38,6 +37,7 @@ import Review from "./pages/review/Review";
 import Sobre from "./pages/sobre/Sobre";
 import Video from "./pages/video/Video";
 import CadastrarCartao from "./pages/cadastrar-cartao/CadastrarCartao";
+import CadastrarPagamento from "./pages/cadastrar-pagamento/CadastrarPagamento"
 
 
 
@@ -67,8 +67,7 @@ function App() {
     {path: '/finalizar', exact: true, element: <Congrats />},
     {path: '/login-gmail', exact: true, element: <Gmail />},
     {path: '/recuperar-senha', exact: true, element: <RecuperaSenha />},
-    {path: '/nova-senha', exact: true, element: <NovaSenha />},
-    {path: '/admin/index', exact: true, element: <IndexInterno />},
+    {path: '/nova-senha', exact: true, element: <NovaSenha />},    
     {path: '/inicio', exact: true, element: <Home />},
     {path: '/perfil', exact: true, element: <Perfil />},
     {path: '/change-profile', exact: true, element: < EditaPerfil/>},
@@ -94,6 +93,7 @@ function App() {
     {path: '/sobre', exact: true, element: < Sobre/>},
     {path: '/video', exact: true, element: < Video/>},
     {path: '/cadastrar-cartao', exact: true, element: < CadastrarCartao/>}, 
+    {path: '/cadastrar-pagamento', exact: true, element: < CadastrarPagamento/>}, 
 
   ]);
 
