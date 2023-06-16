@@ -102,6 +102,26 @@ function App() {
 
 const AppWrapper = () => {
   const [menuObject, setMenuObject] = useState(false);
+  const [onboarding, setOnboarding] = useState({
+    nome: "",
+    sobrenome: "",
+    email: "",
+    telefone: "",
+    cpf: "",
+    rg: "",
+    endereco: {
+      logradouro: "",
+      numero: "",
+      complemento: "",
+      bairro: "",
+      cidade: "",
+      estado: "",
+      cep: "0"
+    },
+    dataNascimento: "",
+    perfil: 1
+  });
+
 
   console.log(menuObject);
 
@@ -110,9 +130,11 @@ const AppWrapper = () => {
     // <Router
       value={{
         state: {
-          changeMenu: menuObject
+          changeMenu: menuObject,
+          onboarding: onboarding
         },
-        setMenuObject: setMenuObject
+        setMenuObject: setMenuObject,
+        setOnboarding: setOnboarding,
       }}
     >
       <Router>

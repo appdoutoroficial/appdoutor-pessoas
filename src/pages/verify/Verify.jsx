@@ -14,8 +14,8 @@ const Verify = (props) => {
   console.log(value, sms);
 
   const verifySms = () => {
-    navigate("/verifica-email");
-    return false;
+    // navigate("/verifica-email");
+    // return false;
 
     if (sms != "") {
       var telefone = value.state.onboarding.telefone.replace("(", "");
@@ -24,7 +24,7 @@ const Verify = (props) => {
       telefone = telefone.replace(" ", "", telefone);
       telefone = telefone.replace("-", "", telefone);
       axiosConfig
-        .post("/Clinica/ValidaTelefone?telefone=55" + telefone + "&pin=" + sms)
+        .post("/Pessoa/ValidaTelefone?telefone=55" + telefone + "&pin=" + sms)
         .then((response) => {
           if (response.data.statusCode === 200 && response.data.sucesso) {
             Swal.fire({
@@ -74,7 +74,7 @@ const Verify = (props) => {
         <div className="d-flex gap-1 mb-2">
           <div className="col">
             <InputMask
-              mask="99999"
+              mask="999999"
               maskChar={""}
               name="codigo"
               value={props.value}

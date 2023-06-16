@@ -1,8 +1,42 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import AppContext from "../../context/AppContext";
+import axiosConfig from '../../axiosConfig';
+import Swal from "sweetalert2";
 
 const Signin = () => {
   const navigate = useNavigate();
+  const [formSubmit, setSendSubmit] = useState({
+    email: "",
+    senha: "",
+  })
+
+  const submitSignin = () => {
+
+    console.log(formSubmit);
+    return false;
+    axiosConfig.post("/Pessoa/Salvar")
+    .then((response) => {
+      if( response.data.statusCode === 200 && response.data.sucesso ){
+          Swal.fire({
+              icon: "success",
+              title: response.data.mensagem,
+              showCancelButton: false,
+              confirmButtonText: 'Ok',
+          }).then((result) => {
+              // navigate('/inicio')
+          });
+      }
+    })
+    .catch((err) =>{
+        Swal.fire({
+            icon: "warning",
+            title: "Erro por favor tente mais tarde",
+            showCancelButton: false,
+            confirmButtonText: 'Ok',
+        });
+    })
+  }
   return (
     <>
       <div className="sign-in p-4">
@@ -33,7 +67,12 @@ const Signin = () => {
                 placeholder="Digite seu E-mail"
                 aria-label="Type your email or phone"
                 aria-describedby="mail"
-                //value=""
+                onChange={(val) =>
+                  setSendSubmit((prev) => ({
+                    ...prev,
+                    email: val.target.value,
+                  }))
+                }
               />
             </div>
           </div>
@@ -57,11 +96,16 @@ const Signin = () => {
                 placeholder="Digite sua senha"
                 aria-label="Type your password"
                 aria-describedby="password"
-                // value=""
+                onChange={(val) =>
+                  setSendSubmit((prev) => ({
+                    ...prev,
+                    senha: val.target.value,
+                  }))
+                }
               />
             </div>
           </div>
-          <div className="form-check form-switch mb-3">
+          {/* <div className="form-check form-switch mb-3">
             <input
               className="form-check-input"
               type="checkbox"
@@ -71,21 +115,21 @@ const Signin = () => {
             <label className="form-check-label" for="flexSwitchCheckDefault">
               Lembrar-me
             </label>
-          </div>
+          </div> */}
           <div>
             <a
-              onClick={() => navigate("/inicio")}
+              onClick={submitSignin}
               className="btn btn-info btn-lg w-100 rounded-4 mb-2"
             >
               Entrar
             </a>
             <div className="d-flex justify-content-between mt-2">
-              <a
+              {/* <a
                 onClick={() => navigate("/recuperar-senha")}
                 className="d-flex justify-content-end small text-primary seta"
               >
                 Esqueceu sua senha?
-              </a>
+              </a> */}
               <p className="text-muted text-end small">
                 Ainda não tem cadastro?{" "}
                 <a

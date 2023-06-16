@@ -4,7 +4,7 @@ const instance = axios.create({
     baseURL: 'https://ad-onboard-webapi-hom.azurewebsites.net',
     headers: {
         "Access-Control-Allow-Origin": "http://localhost:3000",
-        "Access-Control-Allow-Methods": "POST, GET",
+        "Access-Control-Allow-Methods": "POST, GET, PUT",
         "Access-Control-Allow-Headers": "*",
     },
 });

@@ -18,7 +18,7 @@ const VerifyEmail = (props) => {
 
     if( sms != '' ){
       var email = value.state.onboarding.email.replace("(", "");
-      axiosConfig.post("/Clinica/ValidaEmail?email="+email+"&pin="+sms)
+      axiosConfig.post("/Pessoa/ValidaEmail?email="+email+"&pin="+sms.replace(" ", ""))
       .then((response) => {
         if( response.data.statusCode === 200 && response.data.sucesso ){
             Swal.fire({
@@ -62,7 +62,7 @@ const VerifyEmail = (props) => {
         <div className="d-flex gap-1 mb-2">
           <div className="col">
             <InputMask
-              mask="99999" maskChar={''}
+              mask="999999"
               name="codigo"
               value={props.value}
               onChange={(val) => setSMS(val.target.value)}
