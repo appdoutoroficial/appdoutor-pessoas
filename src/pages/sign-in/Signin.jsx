@@ -10,7 +10,6 @@ const Signin = () => {
   const navigate = useNavigate();
   const value = useContext(AppContext);
 
-  console.log(value);
   const sendSubmit = () => {
     axiosConfig
       .post(
@@ -18,7 +17,8 @@ const Signin = () => {
           value.state.onboarding.cpf
       )
       .then((response) => {
-        if (response.data.statusCode === 200 && response.data.sucesso) {
+        console.log(response.data.mensagem);
+        if (response.data.statusCode === 200 && response.data.sucesso && response.data.mensagem != 'CPF já cadastrado.') {
           Swal.fire({
             icon: "success",
             title: response.data.mensagem,
@@ -27,6 +27,13 @@ const Signin = () => {
           }).then((result) => {
             sendEmail();
           });
+        }else{
+          Swal.fire({
+            icon: "success",
+            title: response.data.mensagem,
+            showCancelButton: false,
+            confirmButtonText: "Ok",
+          }).then((result) => {});
         }
       })
       .catch((err) => {

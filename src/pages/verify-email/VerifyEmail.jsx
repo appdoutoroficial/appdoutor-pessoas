@@ -13,9 +13,6 @@ const VerifyEmail = (props) => {
   console.log(value, sms);
 
   const verifySms = () => {
-    navigate('/cadastro');
-    return false;
-
     if( sms != '' ){
       var email = value.state.onboarding.email.replace("(", "");
       axiosConfig.post("/Pessoa/ValidaEmail?email="+email+"&pin="+sms.replace(" ", ""))

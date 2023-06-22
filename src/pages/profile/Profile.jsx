@@ -47,7 +47,6 @@ const Profile = (props) => {
               confirmButtonText: 'Ok',
           }).then((result) => {
             saveCredencial(result.id)
-              // navigate('/cadastrar-pagamento')
           });
       }
     })

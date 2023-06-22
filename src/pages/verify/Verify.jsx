@@ -11,12 +11,8 @@ const Verify = (props) => {
 
   const [sms, setSMS] = useState("");
 
-  console.log(value, sms);
 
   const verifySms = () => {
-    // navigate("/verifica-email");
-    // return false;
-
     if (sms != "") {
       var telefone = value.state.onboarding.telefone.replace("(", "");
       telefone = telefone.replace("(", "", telefone);
@@ -27,14 +23,18 @@ const Verify = (props) => {
         .post("/Pessoa/ValidaTelefone?telefone=55" + telefone + "&pin=" + sms)
         .then((response) => {
           if (response.data.statusCode === 200 && response.data.sucesso) {
-            Swal.fire({
-              icon: "success",
-              title: response.data.mensagem,
-              showCancelButton: false,
-              confirmButtonText: "Ok",
-            }).then((result) => {
-              navigate("/verifica-email");
-            });
+            sendEmail();
+
+            setTimeout(() => {
+              Swal.fire({
+                icon: "success",
+                title: response.data.mensagem,
+                showCancelButton: false,
+                confirmButtonText: "Ok",
+              }).then((result) => {
+                sendEmail();
+              });  
+            }, 500);
           }
         })
         .catch((err) => {
@@ -46,6 +46,36 @@ const Verify = (props) => {
           });
         });
     }
+  };
+
+
+  const sendEmail = () => {
+    axiosConfig
+      .post(
+        "/Pessoa/EnviaEmailParaValidacao?email=" + value.state.onboarding.email
+      )
+      .then((response) => {
+        if (response.data.statusCode === 200 && response.data.sucesso) {
+          Swal.fire({
+            icon: "success",
+            title: response.data.mensagem,
+            showCancelButton: false,
+            confirmButtonText: "Ok",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              navigate("/verifica-email");
+            }
+          });
+        }
+      })
+      .catch((err) => {
+        Swal.fire({
+          icon: "warning",
+          title: "Erro por favor tente mais tarde",
+          showCancelButton: false,
+          confirmButtonText: "Ok",
+        });
+      });
   };
 
   return (

@@ -1,42 +1,50 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AppContext from "../../context/AppContext";
-import axiosConfig from '../../axiosConfig';
+import axiosConfig from '../../axiosConfigLogin';
 import Swal from "sweetalert2";
 
 const Signin = () => {
   const navigate = useNavigate();
   const [formSubmit, setSendSubmit] = useState({
-    email: "",
+    usuario: "",
     senha: "",
   })
 
   const submitSignin = () => {
-
-    console.log(formSubmit);
-    return false;
-    axiosConfig.post("/Pessoa/Salvar")
-    .then((response) => {
-      if( response.data.statusCode === 200 && response.data.sucesso ){
+    if( formSubmit.email != '' && formSubmit.senha != '' ){
+      axiosConfig.post("/Auth/Login", formSubmit)
+      .then((response) => {
+        if( response.data.statusCode === 200 && response.data.sucesso ){
+            Swal.fire({
+                icon: "success",
+                title: response.data.mensagem,
+                showCancelButton: false,
+                confirmButtonText: 'Ok',
+            }).then((result) => {
+                // navigate('/inicio')
+            });
+        }else{
           Swal.fire({
-              icon: "success",
-              title: response.data.mensagem,
-              showCancelButton: false,
-              confirmButtonText: 'Ok',
-          }).then((result) => {
-              // navigate('/inicio')
-          });
-      }
-    })
-    .catch((err) =>{
-        Swal.fire({
-            icon: "warning",
-            title: "Erro por favor tente mais tarde",
+            icon: "success",
+            title: response.data.title,
             showCancelButton: false,
             confirmButtonText: 'Ok',
-        });
-    })
+          }).then((result) => {});
+        }
+      })
+      .catch((err) =>{
+        console.log(err);
+        Swal.fire({
+          icon: "error",
+          title: err.response.data.title,
+          showCancelButton: false,
+          confirmButtonText: 'Ok',
+        }).then((result) => {});
+      })
+    }
   }
+  
   return (
     <>
       <div className="sign-in p-4">
@@ -70,7 +78,7 @@ const Signin = () => {
                 onChange={(val) =>
                   setSendSubmit((prev) => ({
                     ...prev,
-                    email: val.target.value,
+                    usuario: val.target.value,
                   }))
                 }
               />
