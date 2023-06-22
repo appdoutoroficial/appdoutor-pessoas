@@ -11,12 +11,11 @@ const Signin = () => {
   const value = useContext(AppContext);
 
   console.log(value);
-  
   const sendSubmit = () => {
     axiosConfig
       .post(
-        "/Clinica/EnviarTelefoneParaValidacao?telefone=" +
-          value.state.onboarding.telefone
+        "/Pessoa/ValidaCPF?CPF=" +
+          value.state.onboarding.cpf
       )
       .then((response) => {
         if (response.data.statusCode === 200 && response.data.sucesso) {
@@ -41,9 +40,15 @@ const Signin = () => {
   };
 
   const sendEmail = () => {
+    var telefone = value.state.onboarding.telefone.replace("(", "");
+    telefone = telefone.replace("(", "", telefone);
+    telefone = telefone.replace(")", "", telefone);
+    telefone = telefone.replace(" ", "", telefone);
+    telefone = telefone.replace("-", "", telefone);
+    
     axiosConfig
       .post(
-        "/Clinica/EnviaEmailParaValidacao?email=" + value.state.onboarding.email
+        "/Pessoa/EnviarTelefoneParaValidacao?telefone=55" + telefone
       )
       .then((response) => {
         if (response.data.statusCode === 200 && response.data.sucesso) {
@@ -201,7 +206,7 @@ const Signin = () => {
           </div>
           <div className="mb-3">
             <label className="form-label mb-1">
-              Celular
+              Contato
             </label>
             <div
               className="input-group border bg-white rounded-3 py-1"
