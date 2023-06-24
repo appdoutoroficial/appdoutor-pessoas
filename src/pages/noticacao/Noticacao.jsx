@@ -163,7 +163,7 @@ const Notificacao = () => {
         <span className="mdi mdi-message-processing-outline mdi-24px" />
         <span>Chat</span>
       </a>
-      <a href="/perfil" className="col footer-bottom-nav">
+      <a href="/admin/perfil" className="col footer-bottom-nav">
         <span className="mdi mdi-account-outline mdi-24px" />
         <span>Perfil</span>
       </a>

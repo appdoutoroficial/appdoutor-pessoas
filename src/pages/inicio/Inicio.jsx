@@ -275,7 +275,7 @@ const Inicio = () => {
             <span>Chat</span>
           </a>
           <a
-            onClick={() => navigate("/perfil")}
+            onClick={() => navigate("/admin/perfil")}
             className="col footer-bottom-nav"
           >
             <span className="mdi mdi-account-outline mdi-24px" />

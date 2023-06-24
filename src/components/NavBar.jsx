@@ -65,7 +65,7 @@ const NavBar = () => {
           </a>
           <ul>
             <li>
-              <a onClick={() => navigate("/perfil")}>
+              <a onClick={() => navigate("/admin/perfil")}>
                 <span className="mdi mdi-account-outline me-3"></span>Minha
                 conta
               </a>

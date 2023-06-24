@@ -42,7 +42,6 @@ const Signin = () => {
         }
       })
       .catch((err) =>{
-        console.log(err);
         Swal.fire({
           icon: "error",
           title: err.response.data.title,
@@ -52,8 +51,6 @@ const Signin = () => {
       })
     }
   }
-
-  console.log(value.state.userLogged)
   
   return (
     <>

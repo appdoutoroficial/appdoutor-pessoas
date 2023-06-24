@@ -14,7 +14,7 @@ const MeuExame = () => {
       <div className="request-appointment d-flex flex-column vh-100">
         <div className="d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm osahan-header">
           <a
-            onClick={() => navigate("/perfil")}
+            onClick={() => navigate("/admin/perfil")}
             className="text-dark bg-white shadow rounded-circle icon"
           >
             <span className="mdi mdi-arrow-left mdi-18px"></span>
@@ -250,7 +250,7 @@ const MeuExame = () => {
               <span>Chat</span>
             </a>
             <a
-              onClick={() => navigate("/perfil")}
+              onClick={() => navigate("/admin/perfil")}
               className="col footer-bottom-nav"
             >
               <span className="mdi mdi-account-outline mdi-24px"></span>

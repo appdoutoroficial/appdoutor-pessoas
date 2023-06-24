@@ -138,7 +138,7 @@ const IniciarConsulta = () => {
               <span>Chat</span>
             </a>
             <a
-              onClick={() => navigate("/perfil")}
+              onClick={() => navigate("/admin/perfil")}
               className="col footer-bottom-nav active"
             >
               <span className="mdi mdi-account-outline mdi-24px" />

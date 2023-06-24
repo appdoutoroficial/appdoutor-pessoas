@@ -252,7 +252,7 @@ const EditaPerfil = () => {
 
         <div className="footer mt-auto p-3">
           <a
-            onClick={() => navigate("/perfil")}
+            onClick={() => navigate("/admin/perfil")}
             className="btn btn-info btn-lg w-100 rounded-4"
           >
             Salvar alterações

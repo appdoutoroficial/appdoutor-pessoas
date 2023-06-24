@@ -72,7 +72,7 @@ function App() {
 
 
     {path: '/admin/inicio', exact: true, element: <Home />},
-    {path: '/perfil', exact: true, element: <Perfil />},
+    {path: '/admin/perfil', exact: true, element: <Perfil />},
     {path: '/change-profile', exact: true, element: < EditaPerfil/>},
     {path: '/consulta', exact: true, element: < Consulta/>},
     {path: '/admin/exame', exact: true, element: < Exame/>},
@@ -103,7 +103,7 @@ function App() {
   return element;
 }
 const AppWrapper = () => {
-  const [cookie, setCookie] = useCookies(['idUsuario', 'mensagem', 'nome', 'nomeCompleto', 'primeiroAcesso', 'sobreNome', 'statusCode', 'sucesso', 'token']);
+  const [cookie, setCookie, removeCookie] = useCookies(['idUsuario', 'mensagem', 'nome', 'nomeCompleto', 'primeiroAcesso', 'sobreNome', 'statusCode', 'sucesso', 'token']);
   const [menuObject, setMenuObject] = useState(false);
 
   useEffect(() => {
@@ -173,9 +173,7 @@ const AppWrapper = () => {
         }
       })
       .catch((err) =>{
-        if( !err.data.tokenValido ){
-          window.location.href = '/entrar';
-        }
+        window.location.href = '/entrar';
       })
     }
   }
@@ -188,7 +186,6 @@ const AppWrapper = () => {
 
   return (
     <AppContext.Provider
-    // <Router
       value={{
         state: {
           changeMenu: menuObject,
