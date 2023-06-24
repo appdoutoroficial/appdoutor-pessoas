@@ -114,7 +114,6 @@ const AppWrapper = () => {
     }
   }, [cookie]);
 
-
   const [onboarding, setOnboarding] = useState({
     nome: "",
     sobrenome: "",
