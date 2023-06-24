@@ -13,8 +13,11 @@ import { useNavigate } from "react-router-dom";
 
 const Inicio = () => {
   const navigate = useNavigate();
-
   const value = useContext(AppContext);
+
+  setTimeout(() => {
+    value.verifyAdmin();    
+  }, 100);
 
   var settings = {
     infinite: false,
@@ -52,7 +55,7 @@ const Inicio = () => {
               </a>
               <div className="ps-1">
                 <p className="text-orange m-0 small">Bem vindo</p>
-                <p className="fw-bold mb-0 text-primary fw-bold">Olá Arthur!</p>
+                <p className="fw-bold mb-0 text-primary fw-bold">Olá {value.state.userLogged.nomeCompleto}!</p>
               </div>
             </div>
             <div className="d-flex align-items-center gap-2">
@@ -139,7 +142,7 @@ const Inicio = () => {
             >
               <div className="col">
                 <div className="bg-white text-center rounded-4 p-2 shadow-sm">
-                  <a onClick={() => navigate("/agenda")} className="link-dark">
+                  <a onClick={() => navigate("/admin/agenda")} className="link-dark">
                     <img src={photo4} alt="" className="img-fluid px-2" />
                     <p className="text-truncate small pt-2 m-0">Agenda</p>
                   </a>
@@ -147,7 +150,7 @@ const Inicio = () => {
               </div>
               <div className="col">
                 <div className="bg-white text-center rounded-4 p-2 shadow-sm">
-                  <a onClick={() => navigate("/exame")} className="link-dark">
+                  <a onClick={() => navigate("/admin/exame")} className="link-dark">
                     <img src={photo2} alt="" className="img-fluid px-2" />
                     <p className="text-truncate small pt-2 m-0">Exames</p>
                   </a>
@@ -155,7 +158,7 @@ const Inicio = () => {
               </div>
               <div className="col">
                 <div className="bg-white text-center rounded-4 p-2 shadow-sm">
-                  <a onClick={() => navigate("/receita")} className="link-dark">
+                  <a onClick={() => navigate("/admin/receita")} className="link-dark">
                     <img src={photo3} alt="" className="img-fluid px-2" />
                     <p className="text-truncate small pt-2 m-0">Receitas</p>
                   </a>

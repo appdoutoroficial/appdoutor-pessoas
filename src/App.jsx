@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRoutes, BrowserRouter as Router } from "react-router-dom";
 import Inicial from "./pages/inicial/Inicial";
 import Signin from "./pages/sign-in/Signin";
@@ -38,8 +38,7 @@ import Sobre from "./pages/sobre/Sobre";
 import Video from "./pages/video/Video";
 import CadastrarCartao from "./pages/cadastrar-cartao/CadastrarCartao";
 import CadastrarPagamento from "./pages/cadastrar-pagamento/CadastrarPagamento"
-
-
+import { useCookies } from 'react-cookie';
 
 import './assets/materialdesign/scss/materialdesignicons.scss'
 import './bootstrapicons.scss'
@@ -49,6 +48,7 @@ import "slick-carousel/slick/slick-theme.css";
 import './App.scss'
 import "./components/NavBar";
 import AppContext from "./context/AppContext";
+import { Prev } from "react-bootstrap/esm/PageItem";
 
 
 
@@ -68,17 +68,19 @@ function App() {
     {path: '/login-gmail', exact: true, element: <Gmail />},
     {path: '/recuperar-senha', exact: true, element: <RecuperaSenha />},
     {path: '/nova-senha', exact: true, element: <NovaSenha />},    
-    {path: '/inicio', exact: true, element: <Home />},
+
+
+    {path: '/admin/inicio', exact: true, element: <Home />},
     {path: '/perfil', exact: true, element: <Perfil />},
     {path: '/change-profile', exact: true, element: < EditaPerfil/>},
     {path: '/consulta', exact: true, element: < Consulta/>},
-    {path: '/exame', exact: true, element: < Exame/>},
+    {path: '/admin/exame', exact: true, element: < Exame/>},
     {path: '/meu-exame', exact: true, element: < MeuExame/>},
     {path: '/minha-receita', exact: true, element: < MinhaReceita/>},
-    {path: '/agenda', exact: true, element: < Agenda/>},
-    {path: '/acompanha', exact: true, element: < Acompanha/>},
-    {path: '/call', exact: true, element: < Call/>},
-    {path: '/chat', exact: true, element: < Chat/>},
+    {path: '/admin/agenda', exact: true, element: < Agenda/>},
+    {path: '/admin/acompanha', exact: true, element: < Acompanha/>},
+    {path: '/admin/call', exact: true, element: < Call/>},
+    {path: '/admin/chat', exact: true, element: < Chat/>},
     {path: '/continue-profile', exact: true, element: < ContinueProfile/>},
     {path: '/especialista', exact: true, element: < Especialista/>},
     {path: '/finaliza-call', exact: true, element: < FinalizaCall/>},
@@ -88,7 +90,7 @@ function App() {
     {path: '/notificacao', exact: true, element: < Notificacao/>},
     {path: '/pagamento', exact: true, element: < Pagamento/>},
     {path: '/pesquisar', exact: true, element: < Pesquisar/>},
-    {path: '/receita', exact: true, element: < Receita/>},
+    {path: '/admin/receita', exact: true, element: < Receita/>},
     {path: '/review', exact: true, element: < Review/>},
     {path: '/sobre', exact: true, element: < Sobre/>},
     {path: '/video', exact: true, element: < Video/>},
@@ -99,9 +101,19 @@ function App() {
 
   return element;
 }
-
 const AppWrapper = () => {
+  const [cookie, setCookie] = useCookies(['idUsuario', 'mensagem', 'nome', 'nomeCompleto', 'primeiroAcesso', 'sobreNome', 'statusCode', 'sucesso', 'token']);
   const [menuObject, setMenuObject] = useState(false);
+
+  useEffect(() => {
+    if( cookie.token != '' ){
+      setUserLogged(prev => ({...prev, idUsuario: cookie.idUsuario}))
+      setUserLogged(prev => ({...prev, token: cookie.token}))
+      setUserLogged(prev => ({...prev, nomeCompleto: cookie.nomeCompleto}))
+    }
+  }, [cookie]);
+
+
   const [onboarding, setOnboarding] = useState({
     nome: "",
     sobrenome: "",
@@ -122,8 +134,43 @@ const AppWrapper = () => {
     perfil: 1
   });
 
+  const [userLogged, setUserLogged] = useState({
+    idUsuario: "",
+    mensagem: "",
+    nome: "",
+    nomeCompleto: "",
+    primeiroAcesso: false,
+    sobreNome: "",
+    statusCode: 0,
+    sucesso: false,
+    token: ""
+  })
 
-  console.log(menuObject);
+  const resetUser = () => {
+    setUserLogged({
+      idUsuario: "",
+      mensagem: "",
+      nome: "",
+      nomeCompleto: "",
+      primeiroAcesso: false,
+      sobreNome: "",
+      statusCode: 0,
+      sucesso: false,
+      token: ""
+    })
+  }
+
+  const verifySession = () => {
+    if(userLogged.token == '' && cookie.token == ''){
+      window.location.href = '/entrar';
+    }
+  }
+
+  const verifyAdmin = () => {
+    if(window.location.pathname.indexOf("admin")){
+      verifySession();
+    }
+  }
 
   return (
     <AppContext.Provider
@@ -131,10 +178,16 @@ const AppWrapper = () => {
       value={{
         state: {
           changeMenu: menuObject,
-          onboarding: onboarding
+          onboarding: onboarding,
+          userLogged: userLogged,
+          cookie: cookie
         },
         setMenuObject: setMenuObject,
         setOnboarding: setOnboarding,
+        setUserLogged: setUserLogged,
+        resetUser: resetUser,
+        verifyAdmin: verifyAdmin,
+        setCookie: setCookie,
       }}
     >
       <Router>
