@@ -39,6 +39,7 @@ import Video from "./pages/video/Video";
 import CadastrarCartao from "./pages/cadastrar-cartao/CadastrarCartao";
 import CadastrarPagamento from "./pages/cadastrar-pagamento/CadastrarPagamento"
 import { useCookies } from 'react-cookie';
+import axiosConfigLogin from './axiosConfigLogin';
 
 import './assets/materialdesign/scss/materialdesignicons.scss'
 import './bootstrapicons.scss'
@@ -163,6 +164,20 @@ const AppWrapper = () => {
   const verifySession = () => {
     if(userLogged.token == '' && cookie.token == ''){
       window.location.href = '/entrar';
+    }else{
+      axiosConfigLogin.post("/Auth/ValidarToken", {
+        token: cookie.token
+      })
+      .then((response) => {
+        if( !response.data.tokenValido ){
+          window.location.href = '/entrar';
+        }
+      })
+      .catch((err) =>{
+        if( !err.data.tokenValido ){
+          window.location.href = '/entrar';
+        }
+      })
     }
   }
 
