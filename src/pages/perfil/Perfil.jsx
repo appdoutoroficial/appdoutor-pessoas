@@ -3,15 +3,37 @@ import NavBar from "../../components/NavBar";
 import AppContext from "../../context/AppContext";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import axiosConfig from '../../axiosConfigPerfil';
+import Swal from "sweetalert2";
 
 const Perfil = () => {
   const navigate = useNavigate();
   const value = useContext(AppContext);
 
-  setTimeout(() => {
-    value.verifyAdmin();    
-  }, 100);
+  useEffect(() => {
+    setTimeout(() => {
+      value.verifyAdmin();    
+    }, 100);
 
+    axiosConfig.post('/Pessoa/'+value.state.userLogged.idUsuario, {
+      headers: {
+        
+      'Content-Type': 'application/json;charset=UTF-8',
+      "Access-Control-Allow-Origin": "*",
+        withCredentials: false,
+        Authorization: `Bearer ${value.state.userLogged.token}`,
+      }
+    })
+    .then((res) => {
+      console.log(res.data)
+    })
+    .catch((error) => {
+      console.error(error)
+    })
+    
+  })
+
+  
   return (
     <>
       <NavBar />

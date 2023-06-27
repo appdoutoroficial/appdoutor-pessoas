@@ -15,9 +15,12 @@ const Inicio = () => {
   const navigate = useNavigate();
   const value = useContext(AppContext);
 
-  setTimeout(() => {
-    value.verifyAdmin();    
-  }, 100);
+
+  useEffect(() => {
+    setTimeout(() => {
+      value.verifyAdmin();    
+    }, 100);
+  })
 
   var settings = {
     infinite: false,
