@@ -178,6 +178,14 @@ const AppWrapper = () => {
     }
   }
 
+  const convertData = (data) => {
+    var newdata = ''
+    data = data.split("T");
+    data = data[0].split("-");
+    newdata = data[2] + "/" + data[1] + "/" + data[0];
+    return newdata;
+  }
+
   const verifyAdmin = () => {
     if(window.location.pathname.indexOf("admin")){
       verifySession();
@@ -199,6 +207,7 @@ const AppWrapper = () => {
         resetUser: resetUser,
         verifyAdmin: verifyAdmin,
         setCookie: setCookie,
+        convertData: convertData
       }}
     >
       <Router>

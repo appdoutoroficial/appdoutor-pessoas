@@ -9,31 +9,47 @@ import Swal from "sweetalert2";
 const Perfil = () => {
   const navigate = useNavigate();
   const value = useContext(AppContext);
+  
+
+  const[perfil, setPerfil] = useState({
+      id: "",
+      nome: "",
+      sobrenome: "",
+      email: "",
+      telefone: "",
+      rg: "",
+      dataNascimento: "2023-06-28T17:10:04.951Z",
+      perfil: 0,
+      endereco: {
+        logradouro: "",
+        complemento: "",
+        numero: "",
+        bairro: "",
+        cidade: "",
+        estado: "",
+        cep: "rg"
+      },
+  });
 
   useEffect(() => {
     setTimeout(() => {
       value.verifyAdmin();    
     }, 100);
 
-    axiosConfig.post('/Pessoa/'+value.state.userLogged.idUsuario, {
+    axiosConfig.get('/Pessoa/'+value.state.userLogged.idUsuario, {
       headers: {
-        
-      'Content-Type': 'application/json;charset=UTF-8',
-      "Access-Control-Allow-Origin": "*",
-        withCredentials: false,
         Authorization: `Bearer ${value.state.userLogged.token}`,
       }
     })
     .then((res) => {
-      console.log(res.data)
+      // console.log(res.data)
+      setPerfil(res.data);
     })
     .catch((error) => {
       console.error(error)
-    })
-    
-  })
+    })  
+  }, [])
 
-  
   return (
     <>
       <NavBar />
@@ -64,30 +80,30 @@ const Perfil = () => {
                   <p>
                     <span className="text-muted small">Nome</span>
                     <br />
-                    Arthur Bastos
+                    {perfil.nome}
                   </p>
                 </div>
                 <div className="col">
                   <p>
                     <span className="text-muted small">Nascimento</span>
                     <br />
-                    07 Jan 2000
+                    {value.convertData(perfil.dataNascimento)}
                   </p>
                 </div>
               </div>
               <div className="d-flex">
                 <div className="col">
                   <p>
-                    <span className="text-muted small">Genero</span>
+                    <span className="text-muted small">CPF</span>
                     <br />
-                    Masc
+                    {perfil.cpf}
                   </p>
                 </div>
                 <div className="col">
                   <p>
                     <span className="text-muted small">Contato</span>
                     <br />
-                    (11) 95588-9955
+                    {perfil.telefone}
                   </p>
                 </div>
               </div>
@@ -96,14 +112,14 @@ const Perfil = () => {
                   <p>
                     <span className="text-muted small">E-mail</span>
                     <br />
-                    arthur@gmail.com
+                    {perfil.email}
                   </p>
                 </div>
                 <div className="col">
                   <p>
                     <span className="text-muted small">Cidade</span>
                     <br />
-                    São Paulo
+                    {perfil.endereco.cidade}
                   </p>
                 </div>
               </div>

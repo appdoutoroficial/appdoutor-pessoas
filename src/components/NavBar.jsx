@@ -12,8 +12,6 @@ const NavBar = () => {
   const navigate = useNavigate();
   const value = useContext(AppContext);
 
-  console.log(value);
-
   // Aqui fazer a verificação e adicionar a classe, quando clicar passa o elemento atualizando para a raiz e boas. Colocar no nav ou onde precisa.
 
   return (

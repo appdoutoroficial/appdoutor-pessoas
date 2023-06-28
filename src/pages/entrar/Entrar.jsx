@@ -159,7 +159,7 @@ const Signin = () => {
         </form>
       </div>
 
-      <div className="footer fixed-bottom m-4">
+      {/* <div className="footer fixed-bottom m-4">
         <div className="d-flex align-items-center justify-content-between gap-3 mb-3">
           <hr className="col" />
           <span>Ou continue com</span>
@@ -173,7 +173,7 @@ const Signin = () => {
             <i className="mdi mdi-google  secundario mb-02 me-3"></i> Google{" "}
           </a>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

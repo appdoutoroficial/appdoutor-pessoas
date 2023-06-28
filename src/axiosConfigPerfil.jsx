@@ -11,8 +11,11 @@ const instance = axios.create({
 
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 axios.defaults.headers.post['Access-Control-Allow-Headers'] = '*';
-// axios.defaults.preflightContinue = true;
-// axios.defaults.withCredentials = false;
+
+axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
+axios.defaults.headers.get['Access-Control-Allow-Headers'] = '*';
+axios.defaults.preflightContinue = true;
+axios.defaults.withCredentials = false;
 
 
 // Where you would set stuff like your 'Authorization' header, etc ...
